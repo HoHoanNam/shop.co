@@ -1,0 +1,101 @@
+:root {
+  --search-height: 38px;
+  --search-top-spacer: 10px;
+  --search-button-width: 52px;
+  --search-border-radius: 92px;
+}
+
+.wrapper {
+  height: var(--default-layout-header-height);
+}
+
+nav {
+  .navbar-logo {
+    font-size: 3.2rem;
+  }
+}
+
+.navbar-content {
+  justify-content: space-between;
+}
+
+// Search
+.search {
+  position: relative;
+  width: 600px;
+  height: var(--search-height);
+  display: flex;
+  padding-left: 16px;
+  border: 1.5px solid transparent;
+  border-radius: var(--search-border-radius);
+  background-color: rgba(22, 24, 35, 0.06);
+
+  input {
+    flex: 1;
+    height: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    caret-color: var(--primary);
+    background-color: transparent;
+  }
+
+  input:not(:placeholder-shown) ~ .search-btn {
+    color: rgba(22, 24, 35, 0.75);
+  }
+
+  &::after {
+    content: '';
+    width: 1px;
+    height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+    position: absolute;
+    top: var(--search-top-spacer);
+    right: var(--search-button-width);
+    background-color: rgba(22, 24, 35, 0.12);
+  }
+
+  // Khi thẻ input bên trong đc focus => active cái selector này
+  &:focus-within {
+    border-color: rgba(22, 24, 35, 0.2);
+  }
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--search-button-width);
+  height: 100%;
+  font-size: 1.8rem;
+  color: rgba(22, 24, 35, 0.34);
+  border-top-right-radius: var(--search-border-radius);
+  border-bottom-right-radius: var(--search-border-radius);
+  transition: background-color 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+
+  &:active {
+    background-color: rgba(22, 24, 35, 0.06);
+  }
+}
+
+// Actions
+.action-btn {
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--black);
+  border: 1.5px solid transparent;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    color: var(--black);
+    border-color: currentColor;
+    background-color: var(--white);
+  }
+}
