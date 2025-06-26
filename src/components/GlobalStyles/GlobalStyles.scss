@@ -4,6 +4,7 @@
 :root {
   --white: #fff;
   --black: #000;
+  --gray: #f0f0f0;
   --default-layout-header-height: 60px;
 }
 
@@ -22,6 +23,11 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizespeed;
+
+  .navbar-logo {
+    font-weight: bold;
+    font-size: 3.2rem;
+  }
 }
 
 input,
@@ -29,4 +35,8 @@ button,
 [tabIndex] {
   border: none;
   outline: none;
+}
+
+a[href] {
+  text-decoration: none;
 }

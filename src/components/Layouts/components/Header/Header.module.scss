@@ -9,12 +9,6 @@
   height: var(--default-layout-header-height);
 }
 
-nav {
-  .navbar-logo {
-    font-size: 3.2rem;
-  }
-}
-
 .navbar-content {
   justify-content: space-between;
 }
@@ -78,24 +72,5 @@ nav {
 
   &:active {
     background-color: rgba(22, 24, 35, 0.06);
-  }
-}
-
-// Actions
-.action-btn {
-  padding: 10px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  background-color: var(--black);
-  border: 1.5px solid transparent;
-  transition: background-color 0.2s, color 0.2s;
-
-  &:hover {
-    color: var(--black);
-    border-color: currentColor;
-    background-color: var(--white);
   }
 }

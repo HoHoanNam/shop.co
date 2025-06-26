@@ -1,0 +1,20 @@
+.wrapper {
+  min-height: 100px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gray);
+}
+
+.footer-title {
+  margin: 0;
+  height: 50px;
+}
+
+.sub-title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 50px;
+  letter-spacing: 0.3rem;
+}

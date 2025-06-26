@@ -5,7 +5,7 @@ function DefaultLayout({ children }) {
   return (
     <div className="wrapper">
       <Header />
-      <div className="container">{children}</div>
+      <div className="container py-5">{children}</div>
       <Footer />
     </div>
   );

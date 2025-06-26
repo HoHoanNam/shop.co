@@ -1,7 +1,8 @@
+import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown, faHeartCircleCheck, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import classNames from 'classnames/bind';
+import Button from '~/components/Button';
 import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
@@ -9,8 +10,8 @@ const cx = classNames.bind(styles);
 function Header() {
   return (
     <nav className={classNames('navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light', cx('wrapper'))}>
-      <div className="container-fluid">
-        <a className={classNames('navbar-brand', 'fw-bold', cx('navbar-logo'))} href="#">
+      <div className="container">
+        <a className={classNames('navbar-brand', 'navbar-logo')} href="#">
           SHOP.CO
         </a>
         <button
@@ -71,15 +72,9 @@ function Header() {
 
           {/* Actions */}
           <div className={classNames('d-flex', 'gap-3', cx('actions'))}>
-            <button className={cx('action-btn')}>
-              <FontAwesomeIcon className={cx('action-icon')} icon={faHeartCircleCheck} />
-            </button>
-            <button className={cx('action-btn')}>
-              <FontAwesomeIcon className={cx('action-icon')} icon={faCartArrowDown} />
-            </button>
-            <button className={cx('action-btn')}>
-              <FontAwesomeIcon className={cx('action-icon')} icon={faUser} />
-            </button>
+            <Button leftIcon={<FontAwesomeIcon icon={faHeartCircleCheck} />} />
+            <Button leftIcon={<FontAwesomeIcon icon={faCartArrowDown} />} />
+            <Button leftIcon={<FontAwesomeIcon icon={faUser} />} />
           </div>
         </div>
       </div>
