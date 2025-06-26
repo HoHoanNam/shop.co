@@ -1,0 +1,13 @@
+// Cấu hình cho Babel
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "~": "./src"
+        }
+      }
+    ]
+  ]
+}

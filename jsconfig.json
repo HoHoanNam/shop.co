@@ -1,0 +1,9 @@
+{
+  "_comment": "Cấu hình cho IDE (VS Code)",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  }
+}
