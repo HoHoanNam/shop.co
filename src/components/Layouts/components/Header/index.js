@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 
 function Header() {
   return (
-    <nav className={classNames('navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light', cx('wrapper'))}>
+    <nav className={classNames('navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light', 'fixed-top', cx('wrapper'))}>
       <div className="container">
         <a className={classNames('navbar-brand', 'navbar-logo')} href="#">
           SHOP.CO

@@ -5,6 +5,7 @@
 
 .wrapper {
   height: 760px;
+  margin-top: var(--default-layout-header-height);
   background-image: url('../../assets/imgs/hero-img.png');
   background-size: cover; /* Đảm bảo hình ảnh phủ kín khu vực, tỷ lệ được giữ nguyên */
   background-position: center; /* Căn giữa hình ảnh */
