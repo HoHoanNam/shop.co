@@ -1,0 +1,52 @@
+:root {
+  --item-spacing: 50px; /* Khoảng cách giữa hai .stats-item */
+  --divider-offset: calc(var(--item-spacing) / -2); /* Tính nửa khoảng cách */
+}
+
+.wrapper {
+  height: 760px;
+  background-image: url('../../assets/imgs/hero-img.png');
+  background-size: cover; /* Đảm bảo hình ảnh phủ kín khu vực, tỷ lệ được giữ nguyên */
+  background-position: center; /* Căn giữa hình ảnh */
+  background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
+  background-attachment: scroll; /* Ảnh nền sẽ cuộn cùng trang - mặc định */
+}
+
+.hero-content {
+  padding: 50px 0;
+}
+
+.hero-title {
+  font-weight: bold;
+  font-size: 6.4rem;
+  line-height: 8rem;
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.stats {
+  display: flex;
+}
+
+.stats-item {
+  color: var(--white);
+
+  .number {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}
+
+.stats-item + .stats-item {
+  position: relative;
+  margin-left: var(--item-spacing);
+
+  &::before {
+    content: '';
+    width: 1.4px;
+    height: 100%;
+    position: absolute;
+    left: var(--divider-offset); /* Đặt vạch ở giữa khoảng cách */
+    background-color: var(--white); /* Tạo màu cho vạch */
+  }
+}

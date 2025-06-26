@@ -6,7 +6,7 @@ import { DefaultLayout } from '~/components/Layouts';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App" style={{ minHeight: 2000 }}>
         <Routes>
           {publicRoutes.map((route, index) => {
             const Page = route.component;

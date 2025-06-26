@@ -1,3 +1,4 @@
+// Payment
 import visa from '~/assets/imgs/visa.png';
 import paypal from '~/assets/imgs/paypal.png';
 import applepay from '~/assets/imgs/applepay.png';

@@ -3,12 +3,12 @@ import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Button({ children, leftIcon, rightIcon }) {
+function Button({ children, leftIcon, rightIcon, pill, large }) {
   return (
-    <button className={cx('btn')}>
-      <span className={cx('left-icon')}>{leftIcon}</span>
-      <span className={cx('content')}>{children}</span>
-      <span className={cx('right-icon')}>{rightIcon}</span>
+    <button className={cx('btn', { pill, large })}>
+      {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+      {children && <span className={cx('content')}>{children}</span>}
+      {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
     </button>
   );
 }

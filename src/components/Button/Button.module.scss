@@ -8,11 +8,31 @@
   color: var(--black);
   background-color: var(--white);
   border: 1.5px solid #ccc;
-  transition: color 0.2s, background-color 0.2s, border 0.2s;
+  transition: color 0.2s, background-color 0.2s, border 0.2s, box-shadow 0.2s;
 
   &:hover {
     color: var(--white);
     background-color: var(--black);
     border: 1.5px solid transparent;
+    box-shadow: 0 0 8px rgb(255, 255, 255, 0.3);
   }
+}
+
+.icon + .content,
+.content + .icon {
+  margin-left: 10px;
+}
+
+.pill {
+  width: 120px;
+  height: 48px;
+  border-radius: 999px;
+}
+
+.pill.large {
+  width: 212px;
+  height: 68px;
+  font-weight: 600;
+  font-size: 2.4rem;
+  border-width: 3px;
 }
