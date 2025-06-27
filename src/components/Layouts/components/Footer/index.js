@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 function Footer() {
   return (
-    <footer className={classNames(cx('wrapper'), 'py-5')}>
+    <footer className={classNames(cx('wrapper'), 'py-5', 'mt-5')}>
       <div className={classNames('container')}>
         <div className="row">
           {/* Item 1 */}
