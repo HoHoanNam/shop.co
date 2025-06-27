@@ -108,7 +108,7 @@ export const products = {
   topSelling,
   all: [
     ...newArrivals,
-    topSelling,
+    ...topSelling,
     {
       imageUrl: images.poloTrims,
       title: 'Polo with Contrast Trims',

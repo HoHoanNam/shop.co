@@ -15,7 +15,7 @@ function Home() {
       {/* New arrivals */}
       <section className={classNames(cx('new-arrivals'), 'py-5')}>
         <div className="container">
-          <h2 className="text-center py-5">NEW ARRIVALS</h2>
+          <h2 className={classNames(cx('new-arrivals-title'), 'text-center', 'py-5')}>NEW ARRIVALS</h2>
           <div className="row">
             {products.newArrivals.map((product, index) => (
               <div className="col-6 col-md-3" key={index}>
@@ -31,9 +31,9 @@ function Home() {
       </div>
 
       {/* Top selling */}
-      <section className={classNames(cx('new-arrivals'), 'py-5')}>
+      <section className={classNames(cx('top-selling'), 'py-5')}>
         <div className="container">
-          <h2 className="text-center py-5">TOP SELLING</h2>
+          <h2 className={classNames(cx('top-selling-title'), 'text-center', 'py-5')}>TOP SELLING</h2>
           <div className="row">
             {products.topSelling.map((product, index) => (
               <div className="col-6 col-md-3" key={index}>

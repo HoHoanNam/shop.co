@@ -1,4 +1,30 @@
+.product-decs {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .rating-img,
 .rating-number {
   height: 20px;
+}
+
+.new-price {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: var(--green);
+}
+
+.original-price {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: #a6aebf;
+  text-decoration: line-through;
+}
+
+.discount-percent {
+  padding: 5px 8px;
+  font-size: 1.4rem;
+  border-radius: 999px;
+  color: #ff3333;
+  background-color: #ffebeb;
 }

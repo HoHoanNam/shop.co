@@ -1,6 +1,9 @@
-import { useState } from 'react';
 import classNames from 'classnames/bind';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+
 import styles from './Card.module.scss';
+import Button from '~/components/Button';
 import images from '~/assets/imgs/images';
 
 const cx = classNames.bind(styles);
@@ -20,22 +23,24 @@ const getRatingImage = (rating) => {
 };
 
 function Card({ product }) {
-  const [hasDiscount, setHasDiscount] = useState(!!product.discount);
+  const hasDiscount = !!product.discount;
   console.log(!!product.discount);
 
   return (
     <div className={cx('wrapper')}>
       {/* Image URL */}
-      <img src={product.imageUrl} alt={product.title} />
+      <div className="mb-4">
+        <img src={product.imageUrl} alt={product.title} />
+      </div>
 
       {/* Title */}
-      <h4>{product.title}</h4>
+      <h4 className="mb-3 fs-2 fw-bold">{product.title}</h4>
 
       {/* Description */}
-      <p className="m-0">{product.description}</p>
+      <p className={classNames(cx('product-decs'), 'pe-4', 'mb-3')}>{product.description}</p>
 
       {/* Rating */}
-      <div className="d-flex align-items-center gap-3 py-3">
+      <div className="d-flex align-items-center gap-3 mb-3">
         <div>
           <img className={cx('rating-img')} src={getRatingImage(product.rating)} alt={`Rating ${product.rating}`} />
         </div>
@@ -43,29 +48,22 @@ function Card({ product }) {
       </div>
 
       {/* Price */}
-      <p>
-        {hasDiscount && product.discount ? (
-          <>
-            <span style={{ color: 'green' }}>{product.price}$</span>
-            <span style={{ textDecoration: 'line-through', marginLeft: '10px' }}>
-              {product.discount.originalPrice}$
-            </span>
-            <span
-              style={{
-                background: '#ff4444',
-                color: 'white',
-                padding: '2px 5px',
-                borderRadius: '5px',
-                marginLeft: '10px',
-              }}
-            >
-              -{product.discount.percentage}%
-            </span>
-          </>
+      <div className="mb-4">
+        {hasDiscount ? (
+          <div className="d-flex align-items-center gap-3">
+            <span className={cx('new-price')}>{product.price}$</span>
+            <span className={cx('original-price')}>{product.discount.originalPrice}$</span>
+            <span className={cx('discount-percent')}>-{product.discount.percentage}%</span>
+          </div>
         ) : (
-          `${product.price}$`
+          <span className={cx('new-price')}>{`${product.price}$`}</span>
         )}
-      </p>
+      </div>
+
+      {/* Buy button */}
+      <Button square black leftIcon={<FontAwesomeIcon icon={faCartPlus} />}>
+        Buy now
+      </Button>
     </div>
   );
 }
