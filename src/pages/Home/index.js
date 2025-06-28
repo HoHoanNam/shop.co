@@ -1,10 +1,13 @@
 import classNames from 'classnames/bind';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Home.module.scss';
 import Card from '~/components/Card';
 import Brands from '~/components/Brands';
 import Button from '~/components/Button';
-import { products } from '~/data/product';
+import Comment from '~/components/Comment';
+import { products, comments } from '~/data';
 import DressStyle from '~/components/DressStyle';
 import HeroSection from '~/components/HeroSection';
 
@@ -65,6 +68,37 @@ function Home() {
 
       {/* Dress style */}
       <DressStyle />
+
+      <div className="container">
+        <hr />
+      </div>
+
+      {/* Comment section */}
+      <section className={classNames(cx('comment-section'), 'py-5')}>
+        <div className="container">
+          {/* Comment title */}
+          <div className="d-flex align-items-center justify-content-between">
+            <span className={classNames(cx('comment-section-title'), 'py-5')}>OUR HAPPY CUSTOMERS</span>
+            <div>
+              <Button>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </Button>
+              <Button>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </Button>
+            </div>
+          </div>
+
+          {/* Comments */}
+          <div className="row">
+            {comments.map((comment, index) => (
+              <div className="col-12 col-md-4" key={index}>
+                <Comment comment={comment} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

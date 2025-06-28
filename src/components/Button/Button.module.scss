@@ -18,6 +18,10 @@
   }
 }
 
+.btn + .btn {
+  margin-left: 10px;
+}
+
 .icon + .content,
 .content + .icon {
   margin-left: 10px;

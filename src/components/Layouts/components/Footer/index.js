@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 function Footer() {
   return (
-    <footer className={classNames(cx('wrapper'), 'py-5', 'mt-5')}>
+    <footer className={classNames(cx('wrapper'), 'py-5')}>
       <div className={classNames('container')}>
         <div className="row">
           {/* Item 1 */}
@@ -21,7 +21,7 @@ function Footer() {
               We have clothes that suits your style and <br /> which you're proud to wear. From <br /> women to men.
             </p>
             {/* Social */}
-            <div className={classNames(cx('social-media'), 'd-flex', 'gap-2')}>
+            <div className={classNames(cx('social-media'), 'd-flex')}>
               <Button leftIcon={<FontAwesomeIcon icon={faTwitter} />} />
               <Button leftIcon={<FontAwesomeIcon icon={faFacebook} />} />
               <Button leftIcon={<FontAwesomeIcon icon={faInstagram} />} />

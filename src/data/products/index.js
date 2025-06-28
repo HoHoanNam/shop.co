@@ -1,4 +1,4 @@
-import images from '~/data/product/assets/imgs/images';
+import images from '~/data/products/assets/imgs/images';
 
 const newArrivals = [
   {
@@ -103,7 +103,7 @@ const topSelling = [
   },
 ];
 
-export const products = {
+const products = {
   newArrivals,
   topSelling,
   all: [
@@ -163,3 +163,5 @@ export const products = {
     },
   ],
 };
+
+export default products;

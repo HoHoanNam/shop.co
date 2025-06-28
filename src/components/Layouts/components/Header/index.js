@@ -71,7 +71,7 @@ function Header() {
           </div>
 
           {/* Actions */}
-          <div className={classNames('d-flex', 'gap-3', cx('actions'))}>
+          <div className={classNames('d-flex', cx('actions'))}>
             <Button leftIcon={<FontAwesomeIcon icon={faHeartCircleCheck} />} />
             <Button leftIcon={<FontAwesomeIcon icon={faCartArrowDown} />} />
             <Button leftIcon={<FontAwesomeIcon icon={faUser} />} />

@@ -1,0 +1,18 @@
+.wrapper {
+  border-radius: 20px;
+  border: 1.5px solid #e6e6e6;
+}
+
+.check-icon {
+  color: var(--green);
+}
+
+.comment-content {
+  text-align: justify;
+  text-justify: inter-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Giới hạn 4 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Hiển thị "..." khi vượt quá */
+}
