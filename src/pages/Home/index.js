@@ -1,9 +1,12 @@
 import classNames from 'classnames/bind';
+
 import styles from './Home.module.scss';
-import Brands from '~/components/Brands';
-import HeroSection from '~/components/HeroSection';
 import Card from '~/components/Card';
+import Brands from '~/components/Brands';
+import Button from '~/components/Button';
 import { products } from '~/data/product';
+import DressStyle from '~/components/DressStyle';
+import HeroSection from '~/components/HeroSection';
 
 const cx = classNames.bind(styles);
 
@@ -23,6 +26,12 @@ function Home() {
               </div>
             ))}
           </div>
+
+          <div className="d-flex align-items-center justify-content-center mt-5">
+            <Button pill long>
+              View more
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -41,8 +50,21 @@ function Home() {
               </div>
             ))}
           </div>
+
+          <div className="d-flex align-items-center justify-content-center mt-5">
+            <Button pill long>
+              View more
+            </Button>
+          </div>
         </div>
       </section>
+
+      <div className="container">
+        <hr />
+      </div>
+
+      {/* Dress style */}
+      <DressStyle />
     </div>
   );
 }

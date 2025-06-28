@@ -19,6 +19,12 @@ import rating5 from './rating/rating-5.0.png';
 import rating3dot5 from './rating/rating-3.5.png';
 import rating4dot5 from './rating/rating-4.5.png';
 
+// Dress style
+import gym from './dress-style/gym.png';
+import party from './dress-style/party.png';
+import casual from './dress-style/casual.png';
+import formal from './dress-style/formal.png';
+
 const images = {
   payment: [visa, mastercard, paypal, applepay, googlepay],
   brands: [versace, zara, gucci, prada, calvinKlein],
@@ -28,6 +34,12 @@ const images = {
     rating5,
     rating3dot5,
     rating4dot5,
+  },
+  dressStyle: {
+    gym,
+    party,
+    casual,
+    formal,
   },
 };
 
