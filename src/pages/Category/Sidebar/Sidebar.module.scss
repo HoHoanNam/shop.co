@@ -1,0 +1,38 @@
+.wrapper {
+  border-radius: 20px;
+}
+
+// Price range
+.input-range {
+  width: 100%;
+  height: 2.6rem; /* Tăng chiều cao thanh trượt */
+  background: #e5e7eb;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* Tăng kích thước nút */
+    height: 20px; /* Tăng kích thước nút */
+    background: #000; /* Đổi thành màu đen */
+    border: 2px solid #fff; /* Viền trắng */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 20px; /* Tăng kích thước nút */
+    height: 20px; /* Tăng kích thước nút */
+    background: #000; /* Đổi thành màu đen */
+    border: 2px solid #fff; /* Viền trắng */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+// Apply filter
+.apply-filter {
+  height: auto;
+  padding: 8px 0;
+  border-radius: 20px;
+}

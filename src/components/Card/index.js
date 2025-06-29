@@ -61,7 +61,7 @@ function Card({ product }) {
       </div>
 
       {/* Buy button */}
-      <Button square black leftIcon={<FontAwesomeIcon icon={faCartPlus} />}>
+      <Button square blackStyle leftIcon={<FontAwesomeIcon icon={faCartPlus} />}>
         Buy now
       </Button>
     </div>

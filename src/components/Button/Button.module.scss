@@ -22,6 +22,11 @@
   margin-left: 10px;
 }
 
+.btn.large {
+  width: 46px;
+  height: 46px;
+}
+
 .icon + .content,
 .content + .icon {
   margin-left: 10px;
@@ -52,7 +57,7 @@
   border-radius: 8px;
 }
 
-.black {
+.blackStyle {
   color: var(--white);
   background-color: var(--black);
   border-color: transparent;
@@ -62,4 +67,153 @@
     opacity: 0.7;
     transform: scale(1.1);
   }
+}
+
+.grayStyle {
+  background-color: var(--gray);
+}
+
+/* Class cho từng màu và viền đậm hơn 20% */
+.green {
+  background-color: #00c12b;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #00f135; /* lighten 20% */
+    border: 2px solid #00c12b; /* darken 20% từ hover background */
+  }
+}
+.border-green {
+  border: 2px solid #009622;
+}
+
+.red {
+  background-color: #f50606;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #ff1a1a; /* lighten 20% */
+    border: 2px solid #cc1515; /* darken 20% từ hover background */
+  }
+}
+.border-red {
+  border: 2px solid #c40505;
+}
+
+.yellow {
+  background-color: #f5dd06;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #ffe81a; /* lighten 20% */
+    border: 2px solid #ccb615; /* darken 20% từ hover background */
+  }
+}
+.border-yellow {
+  border: 2px solid #c4b105;
+}
+
+.orange {
+  background-color: #f57906;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #ff941a; /* lighten 20% */
+    border: 2px solid #cc7615; /* darken 20% từ hover background */
+  }
+}
+.border-orange {
+  border: 2px solid #c46105;
+}
+
+.cyan {
+  background-color: #06caf5;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #1ae4ff; /* lighten 20% */
+    border: 2px solid #15b7cc; /* darken 20% từ hover background */
+  }
+}
+.border-cyan {
+  border: 2px solid #05a2c4;
+}
+
+.blue {
+  background-color: #063af5;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #1a4cff; /* lighten 20% */
+    border: 2px solid #153ecc; /* darken 20% từ hover background */
+  }
+}
+.border-blue {
+  border: 2px solid #052ec4;
+}
+
+.purple {
+  background-color: #7d06f5;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #971aff; /* lighten 20% */
+    border: 2px solid #7a15cc; /* darken 20% từ hover background */
+  }
+}
+.border-purple {
+  border: 2px solid #6405c4;
+}
+
+.pink {
+  background-color: #f506a4;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #ff1ab9; /* lighten 20% */
+    border: 2px solid #cc1594; /* darken 20% từ hover background */
+  }
+}
+.border-pink {
+  border: 2px solid #c40583;
+}
+
+.brown {
+  background-color: #7b4019;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #96501f; /* lighten 20% */
+    border: 2px solid #794019; /* darken 20% từ hover background */
+  }
+}
+.border-brown {
+  border: 2px solid #623314;
+}
+
+.white {
+  background-color: #ffffff;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #cccccc; /* darken 20% */
+    border: 2px solid #a3a3a3; /* darken 20% từ hover background */
+  }
+}
+.border-white {
+  border: 2px solid #cccccc;
+}
+
+.black {
+  background-color: #000000;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #333333; /* lighten 20% */
+    border: 2px solid #292929; /* darken 20% từ hover background */
+  }
+}
+.border-black {
+  border: 2px solid #000000;
+}
+
+.navy {
+  background-color: #404693;
+  transition: background-color 0.2s, border 0.2s;
+  &:hover {
+    background-color: #4f55b0; /* lighten 20% */
+    border: 2px solid #40448d; /* darken 20% từ hover background */
+  }
+}
+.border-navy {
+  border: 2px solid #333876;
 }
