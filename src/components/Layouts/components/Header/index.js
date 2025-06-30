@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown, faHeartCircleCheck, faUser } from '@fortawesome/free-solid-svg-icons';
@@ -11,9 +12,9 @@ function Header() {
   return (
     <nav className={classNames('navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light', 'fixed-top', cx('wrapper'))}>
       <div className="container">
-        <a className={classNames('navbar-brand', 'navbar-logo')} href="#">
+        <Link className={classNames('navbar-brand', 'navbar-logo')} to="/">
           SHOP.CO
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

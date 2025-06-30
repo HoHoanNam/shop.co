@@ -98,8 +98,8 @@ function Sidebar() {
       <p className="fs-2 fw-bold mb-2">Size:</p>
       <div className="row gy-3">
         {size.map((item, index) => (
-          <div className="col-6">
-            <Button key={index} pill grayStyle>
+          <div className="col-6" key={index}>
+            <Button pill grayStyle>
               {item}
             </Button>
           </div>
