@@ -1,0 +1,10 @@
+.wrapper {
+  margin-top: var(--default-layout-header-height);
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+}

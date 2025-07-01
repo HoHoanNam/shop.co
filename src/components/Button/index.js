@@ -19,7 +19,20 @@ const colorStyles = {
   '#404693': { backgroundClass: 'navy', borderClass: 'border-navy' },
 };
 
-function Button({ className, children, leftIcon, rightIcon, pill, square, large, long, grayStyle, blackStyle, color }) {
+function Button({
+  className,
+  children,
+  leftIcon,
+  rightIcon,
+  pill,
+  square,
+  small,
+  large,
+  long,
+  grayStyle,
+  blackStyle,
+  color,
+}) {
   // Lấy class màu và viền từ colorStyles, nếu không truyền thì dùng CSS mặc định của btn
   const { backgroundClass, borderClass } = colorStyles[color] || {};
 
@@ -28,6 +41,7 @@ function Button({ className, children, leftIcon, rightIcon, pill, square, large,
       pill,
       square,
       long,
+      small,
       large,
       grayStyle,
       blackStyle,

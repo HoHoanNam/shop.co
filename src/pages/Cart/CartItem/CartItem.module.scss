@@ -1,0 +1,42 @@
+.product-img {
+  width: 124px;
+  height: 124px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  overflow: hidden;
+  width: 100px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: var(--gray);
+}
+
+.icon + .quantity,
+.quantity + .icon {
+  margin-left: 10px;
+}
+
+.icon {
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #d6d6d6;
+  }
+}
