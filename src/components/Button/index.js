@@ -37,7 +37,7 @@ function Button({
   const { backgroundClass, borderClass } = colorStyles[color] || {};
 
   const classes = classNames(
-    cx('btn', backgroundClass, borderClass, {
+    cx('btn', {
       pill,
       square,
       long,
@@ -45,6 +45,8 @@ function Button({
       large,
       grayStyle,
       blackStyle,
+      [borderClass]: borderClass,
+      [backgroundClass]: backgroundClass,
     }),
     className,
   );

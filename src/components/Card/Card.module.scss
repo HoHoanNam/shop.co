@@ -1,3 +1,10 @@
+.product-img {
+  width: 295px;
+  height: 298px;
+  border-radius: var(--border-radius-product-img);
+  background-color: var(--background-product-img);
+}
+
 .product-decs {
   text-align: justify;
   text-justify: inter-word;

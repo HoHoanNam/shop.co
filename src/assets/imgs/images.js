@@ -43,4 +43,18 @@ const images = {
   },
 };
 
+// Logic chọn ảnh rating dựa trên giá trị rating
+export const getRatingImage = (rating) => {
+  const ratingMap = {
+    3.0: images.rating.rating3,
+    3.5: images.rating.rating3dot5,
+    4.0: images.rating.rating4,
+    4.5: images.rating.rating4dot5,
+    5.0: images.rating.rating5,
+  };
+  // Làm tròn rating về số thập phân gần nhất (0.5) để khớp với key trong ratingMap
+  const roundedRating = Math.round(rating * 2) / 2;
+  return ratingMap[roundedRating] || images.rating.rating3; // Mặc định là rating3 nếu không khớp
+};
+
 export default images;

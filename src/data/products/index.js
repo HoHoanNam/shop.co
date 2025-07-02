@@ -3,7 +3,7 @@ import images from '~/data/products/assets/imgs/images';
 const newArrivals = [
   {
     imageUrl: images.blackTshirt,
-    title: 'T-SHIRT WITH TAPE DETAILS',
+    title: 'T-Shirt with Tape Details',
     description:
       'Trendy cotton T-shirt with bold tape accents. Comfortable, breathable, and perfect for everyday style.',
     rating: 4.5,
@@ -14,7 +14,7 @@ const newArrivals = [
   },
   {
     imageUrl: images.skinnyJeans,
-    title: 'SKINNY FIT JEANS',
+    title: 'Skinny Fit Jeans',
     description:
       'Slim and stretchy skinny jeans that hug the body for a sleek, modern look. Perfect for day-to-night wear.',
     rating: 3.5,
@@ -29,7 +29,7 @@ const newArrivals = [
   },
   {
     imageUrl: images.checkeredShirt,
-    title: 'CHECKERED SHIRT',
+    title: 'Checkered Shirt',
     description:
       'Classic checkered shirt with a relaxed fit. Versatile, stylish, and perfect for layering or wearing solo.',
     rating: 4.5,
@@ -40,7 +40,7 @@ const newArrivals = [
   },
   {
     imageUrl: images.sleeveTshirt,
-    title: 'SLEEVE STRIPED T-SHIRT',
+    title: 'Sleeve Striped T-shirt',
     description: 'Casual T-shirt with sporty sleeve stripes. Soft, breathable, and easy to style for everyday wear.',
     rating: 4.5,
     price: 112,
@@ -57,7 +57,7 @@ const newArrivals = [
 const topSelling = [
   {
     imageUrl: images.verticalShirt,
-    title: 'VERTICAL STRIPED SHIRT',
+    title: 'Vertical Striped Shirt',
     description:
       'Smart shirt with vertical stripes for a tall, slim look. Lightweight, stylish, and perfect for any occasion.',
     rating: 5.0,
@@ -72,7 +72,7 @@ const topSelling = [
   },
   {
     imageUrl: images.courageTshirt,
-    title: 'COURAGE GRAPHIC T-SHIRT',
+    title: 'Courage Graphic T-shirt',
     description:
       'Bold graphic T-shirt featuring a “Courage” print. Made from soft cotton for all-day comfort and style.',
     rating: 4.0,
@@ -83,7 +83,7 @@ const topSelling = [
   },
   {
     imageUrl: images.looseShorts,
-    title: 'LOOSE FIT BERMUDA SHORTS',
+    title: 'Loose Fit Bermuda Shorts',
     description: 'Relaxed-fit Bermuda shorts with a comfy, casual vibe. Lightweight and perfect for warm-weather days.',
     rating: 4.0,
     price: 80,
@@ -93,7 +93,7 @@ const topSelling = [
   },
   {
     imageUrl: images.fadedJeans,
-    title: 'FADED SKINNY JEANS',
+    title: 'Faded Skinny Jeans',
     description: 'Skinny jeans with a stylish faded wash. Stretchy, sleek, and perfect for a modern, laid-back look.',
     rating: 4.5,
     price: 210,
@@ -151,14 +151,137 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
-      imageUrl: images.bstripedTshirt,
-      title: 'Black Striped T-shirt',
-      description:
-        'Sleek black T-shirt with minimal stripe details. Comfortable, versatile, and easy to pair with any outfit.',
+      imageUrl: images.cottonTurtleneck,
+      title: 'Organic Cotton Turtleneck',
+      description: 'Soft organic cotton turtleneck with subtle stripes, perfect for comfortable and versatile styling.',
       rating: 3.5,
       price: 176,
       discount: null,
       colors: ['green', 'brown', 'gray'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      imageUrl: images.organicCottonTurtleneck,
+      title: 'Cotton Long-Sleeve Turtleneck',
+      description:
+        'Soft, sustainable organic cotton turtleneck with slim fit. Ideal for layering or cool-weather style with comfort.',
+      rating: 4.0,
+      price: 85,
+      discount: null,
+      colors: ['black', 'white', 'beige'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      imageUrl: images.flannelPant,
+      title: 'Wool Flannel Pant',
+      description: 'Cozy wool flannel pants with tailored fit. Warm, soft, ideal for cold-weather outfits with style.',
+      rating: 4.5,
+      price: 213,
+      discount: {
+        originalPrice: 250,
+        percentage: 15,
+        newPrice: 213,
+      },
+      colors: ['charcoal', 'navy', 'olive'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      imageUrl: images.tailoredBlackPant,
+      title: 'Tailored Black Pant',
+      description:
+        'Sleek tailored black pants with a modern fit. Crafted from smooth fabric, perfect for formal or smart-casual looks.',
+      rating: 4.5,
+      price: 145,
+      discount: {
+        originalPrice: 180,
+        percentage: 20,
+        newPrice: 145,
+      },
+      colors: ['black'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      imageUrl: images.blackCardigan,
+      title: 'Black Knit Cardigan',
+      description:
+        'Classic black knit cardigan with button front and pocket details. Soft wool blend, ideal for versatile layering.',
+      rating: 4.0,
+      price: 130,
+      discount: {
+        originalPrice: 150,
+        percentage: 15,
+        newPrice: 130,
+      },
+      colors: ['black'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      imageUrl: images.blackMockNeck,
+      title: 'Black Mock Neck Top',
+      description:
+        'Sleek black mock neck top with long sleeves. Made from soft, stretchy fabric, perfect for a minimalist wardrobe.',
+      rating: 4.5,
+      price: 75,
+      discount: null,
+      colors: ['black'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      imageUrl: images.grayBlazer,
+      title: 'Gray Wool Blazer',
+      description: 'Elegant gray wool blazer with tailored fit. Smooth texture, ideal for professional occasions.',
+      rating: 4.0,
+      price: 250,
+      discount: {
+        originalPrice: 300,
+        percentage: 15,
+        newPrice: 250,
+      },
+      colors: ['gray'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      imageUrl: images.beigeTrenchCoat,
+      title: 'Beige Trench Coat',
+      description:
+        'Elegant beige trench coat with a belted waist. Crafted from smooth wool, perfect for chic, all-season wear.',
+      rating: 4.5,
+      price: 275,
+      discount: {
+        originalPrice: 330,
+        percentage: 15,
+        newPrice: 275,
+      },
+      colors: ['beige'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      imageUrl: images.beigeKnitCardigan,
+      title: 'Beige Knit Cardigan',
+      description:
+        'Stylish beige knit cardigan with button front and pearl embellishments. Soft wool blend, perfect for elegant layering.',
+      rating: 4.0,
+      price: 165,
+      discount: {
+        originalPrice: 200,
+        percentage: 15,
+        newPrice: 165,
+      },
+      colors: ['beige'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      imageUrl: images.beigeCableCardigan,
+      title: 'Beige Cable Cardigan',
+      description: 'Cozy beige cable-knit cardigan with button front. Soft wool blend, ideal for stylish layering.',
+      rating: 4.5,
+      price: 140,
+      discount: {
+        originalPrice: 175,
+        percentage: 20,
+        newPrice: 140,
+      },
+      colors: ['beige'],
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
   ],
