@@ -1,12 +1,16 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import { publicRoutes } from '~/routes';
+import ScrollToTop from '~/components/ScrollToTop';
 import { DefaultLayout } from '~/components/Layouts';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        {/* Tự động cuộn lên đầu trang khi điều hướng */}
+        <ScrollToTop />
         <Routes>
           {publicRoutes.map((route, index) => {
             const Page = route.component;

@@ -103,6 +103,7 @@ function Home() {
                   </div>
                 );
               }
+              return null;
             })}
           </div>
         </div>

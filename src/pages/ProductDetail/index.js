@@ -9,7 +9,7 @@ import Comment from '~/components/Comment';
 import { products, comments } from '~/data';
 import Newsletter from '~/components/Newsletter';
 import { getRatingImage } from '~/assets/imgs/images';
-import styles from './ProductDetails.module.scss';
+import styles from './ProductDetail.module.scss';
 
 const cx = classNames.bind(styles);
 
