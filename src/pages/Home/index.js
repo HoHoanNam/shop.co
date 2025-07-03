@@ -10,6 +10,7 @@ import Button from '~/components/Button';
 import Comment from '~/components/Comment';
 import { products, comments } from '~/data';
 import DressStyle from '~/components/DressStyle';
+import Newsletter from '~/components/Newsletter';
 import HeroSection from '~/components/HeroSection';
 
 const cx = classNames.bind(styles);
@@ -106,6 +107,11 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* Newsletter */}
+      <div className="container mt-5">
+        <Newsletter />
+      </div>
     </div>
   );
 }

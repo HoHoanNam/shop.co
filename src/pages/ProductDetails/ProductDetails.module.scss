@@ -1,4 +1,6 @@
-.wrapper {
+.wrapper,
+.comments-section,
+.newsletter-section {
   margin-top: var(--default-layout-header-height);
 }
 
@@ -107,10 +109,6 @@
 }
 
 // Comments section
-.comments-section {
-  margin-top: 50px;
-}
-
 .comments-stats {
   display: flex;
   align-items: center;

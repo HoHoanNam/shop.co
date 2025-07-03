@@ -6,6 +6,7 @@ import { faCheck, faChevronDown, faMinus, faPlus, faSliders } from '@fortawesome
 import Button from '~/components/Button';
 import Comment from '~/components/Comment';
 import { products, comments } from '~/data';
+import Newsletter from '~/components/Newsletter';
 import { getRatingImage } from '~/assets/imgs/images';
 import styles from './ProductDetails.module.scss';
 
@@ -201,6 +202,10 @@ function ProductDetail() {
             </Button>
           </div>
         </section>
+
+        <div className={cx('newsletter-section')}>
+          <Newsletter />
+        </div>
       </div>
     </div>
   );

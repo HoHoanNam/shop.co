@@ -1,0 +1,45 @@
+.wrapper {
+  height: 180px;
+  padding: 30px 50px;
+  border-radius: 20px;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.newsletter-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.email {
+  width: 350px;
+  height: 48px;
+  padding: 0 22px;
+  overflow: hidden;
+  border-radius: 62px;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--white);
+
+  .email-icon {
+    color: #999;
+    margin-right: 10px;
+  }
+
+  .email-input {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.subscribe-btn {
+  width: 350px;
+  height: 48px;
+  font-weight: 500;
+
+  &:hover {
+    color: #e6e6e6;
+    background-color: #999;
+  }
+}
