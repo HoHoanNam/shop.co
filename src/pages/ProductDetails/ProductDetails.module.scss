@@ -105,3 +105,19 @@
     transform: scale(1);
   }
 }
+
+// Comments section
+.comments-section {
+  margin-top: 50px;
+}
+
+.comments-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .sort-btn {
+    width: 48px;
+    height: 48px;
+  }
+}

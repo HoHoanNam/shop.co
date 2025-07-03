@@ -94,11 +94,15 @@ function Home() {
 
           {/* Comments */}
           <div className="row">
-            {comments.map((comment, index) => (
-              <div className="col-12 col-md-4" key={index}>
-                <Comment comment={comment} />
-              </div>
-            ))}
+            {comments.map((comment, index) => {
+              if (index <= 2) {
+                return (
+                  <div className="col-12 col-md-4 gy-4" key={index}>
+                    <Comment comment={comment} />
+                  </div>
+                );
+              }
+            })}
           </div>
         </div>
       </section>

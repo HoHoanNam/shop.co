@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faChevronDown, faMinus, faPlus, faSliders } from '@fortawesome/free-solid-svg-icons';
 
-import { products } from '~/data';
 import Button from '~/components/Button';
+import Comment from '~/components/Comment';
+import { products, comments } from '~/data';
 import { getRatingImage } from '~/assets/imgs/images';
 import styles from './ProductDetails.module.scss';
 
@@ -51,7 +52,8 @@ function ProductDetail() {
   return (
     <div className={classNames(cx('wrapper'), 'py-5')}>
       <div className="container">
-        <div className="row gx-5">
+        {/* Product details section */}
+        <section className="row gx-5">
           {/* Product image */}
           <div className="col-md-4">
             <img className={cx('product-img')} src={randomItem.imageUrl} />
@@ -162,7 +164,43 @@ function ProductDetail() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Comments section */}
+        <section className={cx('comments-section')}>
+          <div className={cx('comments-stats')}>
+            {/* Number of comments */}
+            <div>
+              <span className="fs-1 fw-bold me-2">All Reviews</span>
+              <span className="fs-2 text-secondary">(392)</span>
+            </div>
+
+            {/* Comment buttons */}
+            <div>
+              <Button grayStyle className={cx('sort-btn')} leftIcon={<FontAwesomeIcon icon={faSliders} />} />
+              <Button pill grayStyle rightIcon={<FontAwesomeIcon icon={faChevronDown} />}>
+                Latest
+              </Button>
+              <Button pill long blackStyle>
+                Write a Review
+              </Button>
+            </div>
+          </div>
+
+          <div className="row">
+            {comments.map((comment, index) => (
+              <div className="col-12 col-md-4 gy-4" key={index}>
+                <Comment comment={comment} />
+              </div>
+            ))}
+          </div>
+
+          <div className="d-flex justify-content-center mt-5">
+            <Button pill long grayStyle>
+              Load more Reviews
+            </Button>
+          </div>
+        </section>
       </div>
     </div>
   );
