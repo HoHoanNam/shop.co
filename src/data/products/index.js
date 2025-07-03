@@ -1,7 +1,9 @@
+import { v4 as uuidv4 } from 'uuid';
 import images from '~/data/products/assets/imgs/images';
 
 const newArrivals = [
   {
+    id: uuidv4(), // Tạo UUID ngẫu nhiên
     imageUrl: images.blackTshirt,
     title: 'T-Shirt with Tape Details',
     description:
@@ -13,6 +15,7 @@ const newArrivals = [
     sizes: ['small', 'medium', 'large', 'x-large'],
   },
   {
+    id: uuidv4(),
     imageUrl: images.skinnyJeans,
     title: 'Skinny Fit Jeans',
     description:
@@ -28,6 +31,7 @@ const newArrivals = [
     sizes: ['small', 'medium', 'large', 'x-large'],
   },
   {
+    id: uuidv4(),
     imageUrl: images.checkeredShirt,
     title: 'Checkered Shirt',
     description:
@@ -39,6 +43,7 @@ const newArrivals = [
     sizes: ['small', 'medium', 'large', 'x-large'],
   },
   {
+    id: uuidv4(),
     imageUrl: images.sleeveTshirt,
     title: 'Sleeve Striped T-shirt',
     description: 'Casual T-shirt with sporty sleeve stripes. Soft, breathable, and easy to style for everyday wear.',
@@ -56,6 +61,7 @@ const newArrivals = [
 
 const topSelling = [
   {
+    id: uuidv4(),
     imageUrl: images.verticalShirt,
     title: 'Vertical Striped Shirt',
     description:
@@ -71,6 +77,7 @@ const topSelling = [
     sizes: ['small', 'medium', 'large', 'x-large'],
   },
   {
+    id: uuidv4(),
     imageUrl: images.courageTshirt,
     title: 'Courage Graphic T-shirt',
     description:
@@ -82,6 +89,7 @@ const topSelling = [
     sizes: ['small', 'medium', 'large', 'x-large'],
   },
   {
+    id: uuidv4(),
     imageUrl: images.looseShorts,
     title: 'Loose Fit Bermuda Shorts',
     description: 'Relaxed-fit Bermuda shorts with a comfy, casual vibe. Lightweight and perfect for warm-weather days.',
@@ -92,6 +100,7 @@ const topSelling = [
     sizes: ['small', 'medium', 'large', 'x-large'],
   },
   {
+    id: uuidv4(),
     imageUrl: images.fadedJeans,
     title: 'Faded Skinny Jeans',
     description: 'Skinny jeans with a stylish faded wash. Stretchy, sleek, and perfect for a modern, laid-back look.',
@@ -110,6 +119,7 @@ const products = {
     ...newArrivals,
     ...topSelling,
     {
+      id: uuidv4(),
       imageUrl: images.poloTrims,
       title: 'Polo with Contrast Trims',
       description:
@@ -125,6 +135,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.gradientTshirt,
       title: 'Gradient Graphic T-shirt',
       description:
@@ -140,6 +151,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.poloDetails,
       title: 'Polo with Tipping Details',
       description:
@@ -151,6 +163,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.cottonTurtleneck,
       title: 'Organic Cotton Turtleneck',
       description: 'Soft organic cotton turtleneck with subtle stripes, perfect for comfortable and versatile styling.',
@@ -161,6 +174,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.organicCottonTurtleneck,
       title: 'Cotton Long-Sleeve Turtleneck',
       description:
@@ -172,6 +186,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.flannelPant,
       title: 'Wool Flannel Pant',
       description: 'Cozy wool flannel pants with tailored fit. Warm, soft, ideal for cold-weather outfits with style.',
@@ -186,6 +201,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.tailoredBlackPant,
       title: 'Tailored Black Pant',
       description:
@@ -201,6 +217,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.blackCardigan,
       title: 'Black Knit Cardigan',
       description:
@@ -216,6 +233,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.blackMockNeck,
       title: 'Black Mock Neck Top',
       description:
@@ -227,6 +245,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.grayBlazer,
       title: 'Gray Wool Blazer',
       description: 'Elegant gray wool blazer with tailored fit. Smooth texture, ideal for professional occasions.',
@@ -241,6 +260,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.beigeTrenchCoat,
       title: 'Beige Trench Coat',
       description:
@@ -256,6 +276,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.beigeKnitCardigan,
       title: 'Beige Knit Cardigan',
       description:
@@ -271,6 +292,7 @@ const products = {
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
     {
+      id: uuidv4(),
       imageUrl: images.beigeCableCardigan,
       title: 'Beige Cable Cardigan',
       description: 'Cozy beige cable-knit cardigan with button front. Soft wool blend, ideal for stylish layering.',

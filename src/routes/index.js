@@ -10,7 +10,7 @@ const publicRoutes = [
   { path: '/', component: Home },
   { path: '/cart', component: Cart },
   { path: '/category', component: Category },
-  { path: '/product-details', component: ProductDetails },
+  { path: '/product/:id', component: ProductDetails }, // Sửa từ /product-details thành /product/:id
 ];
 
 const privateRoutes = [];

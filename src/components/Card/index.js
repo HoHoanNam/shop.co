@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,9 +11,14 @@ const cx = classNames.bind(styles);
 
 function Card({ product }) {
   const hasDiscount = !!product.discount;
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/product/${product.id}`);
+  };
 
   return (
-    <div className={cx('wrapper')}>
+    <div className={cx('wrapper')} onClick={handleCardClick}>
       {/* Image URL */}
       <div className="mb-4">
         <img className={cx('product-img')} src={product.imageUrl} alt={product.title} />

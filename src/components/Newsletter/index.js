@@ -22,7 +22,7 @@ function Newsletter() {
             <span className={cx('email-icon')}>
               <FontAwesomeIcon icon={faEnvelope} />
             </span>
-            <input className={cx('email-input')} placeholder="Enter your email address" />
+            <input type="email" className={cx('email-input')} placeholder="Enter your email address" />
           </div>
 
           {/* Subscribe button */}
