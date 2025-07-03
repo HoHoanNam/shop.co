@@ -4,6 +4,7 @@ import { useCallback, useState } from 'react';
 import { products } from '~/data';
 import CartItem from './CartItem';
 import OrderSummary from './OrderSummary';
+import Breadcrumb from '~/components/Breadcrumb';
 import styles from './Cart.module.scss';
 
 const cx = classNames.bind(styles);
@@ -20,6 +21,9 @@ function Cart() {
   return (
     <section className={classNames(cx('wrapper'), 'py-5')}>
       <div className="container">
+        {/* Breadcrumb */}
+        <Breadcrumb />
+
         <div className="row">
           {/* Cart list */}
           <div className="col-md-8">

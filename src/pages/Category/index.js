@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import Sidebar from './Sidebar';
 import { products } from '~/data';
 import Card from '~/components/Card';
+import Breadcrumb from '~/components/Breadcrumb';
 import styles from './Category.module.scss';
 
 const cx = classNames.bind(styles);
@@ -11,6 +12,9 @@ function Category() {
   return (
     <div className={classNames(cx('wrapper'), 'py-5')}>
       <div className="container">
+        {/* Breadcrumb */}
+        <Breadcrumb />
+
         <div className="row gx-5">
           {/* Sidebar */}
           <div className="col-md-3">

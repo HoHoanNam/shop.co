@@ -7,6 +7,7 @@ import { faCheck, faChevronDown, faMinus, faPlus, faSliders } from '@fortawesome
 import Button from '~/components/Button';
 import Comment from '~/components/Comment';
 import { products, comments } from '~/data';
+import Breadcrumb from '~/components/Breadcrumb';
 import Newsletter from '~/components/Newsletter';
 import { getRatingImage } from '~/assets/imgs/images';
 import styles from './ProductDetail.module.scss';
@@ -49,6 +50,9 @@ function ProductDetail() {
   return (
     <div className={classNames(cx('wrapper'), 'py-5')}>
       <div className="container">
+        {/* Breadcrumb */}
+        <Breadcrumb />
+
         {/* Product details section */}
         <section className="row gx-5">
           {/* Product image */}
