@@ -4,6 +4,7 @@ import Sidebar from './Sidebar';
 import { products } from '~/data';
 import Card from '~/components/Card';
 import Breadcrumb from '~/components/Breadcrumb';
+import Pagination from '~/components/Pagination';
 import styles from './Category.module.scss';
 
 const cx = classNames.bind(styles);
@@ -21,17 +22,16 @@ function Category() {
             <Sidebar />
           </div>
 
-          {/* Product list */}
+          {/* Product list with Pagination */}
           <div className="col-md-9">
             <div>
               <h1 className="display-3 fw-bold text-center text-primary-emphasis mb-5">ALL PRODUCTS</h1>
-              <div className="row gy-5">
-                {products.all.map((product, index) => (
-                  <div className="col-md-4" key={index}>
-                    <Card product={product} />
-                  </div>
-                ))}
-              </div>
+              <Pagination
+                items={products.all}
+                itemsPerPage={9} // 9 sản phẩm mỗi trang
+                itemsPerRow={3} // 3 sản phẩm mỗi hàng
+                renderItem={(product) => <Card product={product} />}
+              />
             </div>
           </div>
         </div>
