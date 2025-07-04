@@ -25,9 +25,17 @@ import party from './dress-style/party.png';
 import casual from './dress-style/casual.png';
 import formal from './dress-style/formal.png';
 
+// Banners
+import banner1 from './banners/banner1.png';
+import banner2 from './banners/banner2.png';
+import banner3 from './banners/banner3.png';
+import banner4 from './banners/banner4.png';
+import banner5 from './banners/banner5.png';
+
 const images = {
   payment: [visa, mastercard, paypal, applepay, googlepay],
   brands: [versace, zara, gucci, prada, calvinKlein],
+  banners: [banner1, banner2, banner3, banner4, banner5],
   rating: {
     rating3,
     rating4,

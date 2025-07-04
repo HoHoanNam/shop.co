@@ -9,6 +9,7 @@ import Brands from '~/components/Brands';
 import Button from '~/components/Button';
 import Comment from '~/components/Comment';
 import { products, comments } from '~/data';
+import Carousel from '~/components/Carousel';
 import DressStyle from '~/components/DressStyle';
 import Newsletter from '~/components/Newsletter';
 import HeroSection from '~/components/HeroSection';
@@ -23,6 +24,11 @@ function Home() {
       {/* New arrivals */}
       <section className={classNames(cx('new-arrivals'), 'py-5')}>
         <div className="container">
+          {/* Carousel */}
+          <div className="py-5">
+            <Carousel />
+          </div>
+
           <h2 className={classNames(cx('new-arrivals-title'), 'text-center', 'py-5')}>NEW ARRIVALS</h2>
           <div className="row">
             {products.newArrivals.map((product, index) => (
