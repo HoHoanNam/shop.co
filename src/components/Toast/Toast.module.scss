@@ -1,0 +1,71 @@
+// Toast Wrapper
+.toast-wrapper {
+  position: fixed;
+  top: 80px;
+  right: 32px;
+  z-index: 1000;
+}
+
+// Toast Message
+.toast-message {
+  width: 400px;
+  min-height: 100px;
+  padding: 10px 16px;
+  opacity: 1;
+  animation: slideInLeft ease 0.3s; // Animation khi xuất hiện
+}
+
+.toast-message + .toast-message {
+  margin-top: 24px;
+}
+
+.toast-header {
+  font-size: 2.2rem;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+.toast-message.toast-success {
+  color: hsl(153, 60%, 21%);
+  background-color: hsl(153, 60%, 61%);
+}
+
+.toast-message.toast-error {
+  color: hsl(0, 72%, 20%);
+  background-color: hsl(0, 72%, 60%);
+}
+
+.toast-message.toast-warning {
+  color: hsl(41, 100%, 27%);
+  background-color: hsl(41, 100%, 67%);
+}
+
+.toast-message.toast-info {
+  color: hsl(221, 90%, 27%);
+  background-color: hsl(221, 90%, 67%);
+}
+
+// Keyframes cho animation
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(100% + 32px));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+// Class để kích hoạt animation fadeOut
+.fade-out {
+  animation: fadeOut linear 1s forwards;
+}

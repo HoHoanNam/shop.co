@@ -32,6 +32,16 @@ import banner3 from './banners/banner3.png';
 import banner4 from './banners/banner4.png';
 import banner5 from './banners/banner5.png';
 
+// Stores
+import store1 from './stores/store1.png';
+import store2 from './stores/store2.png';
+import store3 from './stores/store3.png';
+import store4 from './stores/store4.png';
+import store5 from './stores/store5.png';
+import store6 from './stores/store6.png';
+import store7 from './stores/store7.png';
+import store8 from './stores/store8.png';
+
 const images = {
   payment: [visa, mastercard, paypal, applepay, googlepay],
   brands: [versace, zara, gucci, prada, calvinKlein],
@@ -48,6 +58,16 @@ const images = {
     party,
     casual,
     formal,
+  },
+  stores: {
+    store1,
+    store2,
+    store3,
+    store4,
+    store5,
+    store6,
+    store7,
+    store8,
   },
 };
 

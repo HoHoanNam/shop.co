@@ -10,7 +10,7 @@ import styles from './Cart.module.scss';
 const cx = classNames.bind(styles);
 
 function Cart() {
-  const [cartItems, setCartItems] = useState(products.newArrivals.map((product) => ({ ...product, quantity: 1 })));
+  const [cartItems, setCartItems] = useState(products.topSelling.map((product) => ({ ...product, quantity: 1 })));
 
   const updateItemQuantity = useCallback((index, newQuantity) => {
     setCartItems((prevItems) => prevItems.map((item, i) => (i === index ? { ...item, quantity: newQuantity } : item)));

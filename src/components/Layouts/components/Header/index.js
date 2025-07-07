@@ -30,9 +30,9 @@ function Header() {
           {/* Nav list */}
           <ul className={classNames('navbar-nav', 'mb-2', 'mb-lg-0', 'fs-4', cx('navbar-list'))}>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Shop
-              </a>
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/category">

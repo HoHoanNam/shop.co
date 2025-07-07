@@ -32,6 +32,7 @@ function Button({
   grayStyle,
   blackStyle,
   color,
+  onClick,
 }) {
   // Lấy class màu và viền từ colorStyles, nếu không truyền thì dùng CSS mặc định của btn
   const { backgroundClass, borderClass } = colorStyles[color] || {};
@@ -52,7 +53,7 @@ function Button({
   );
 
   return (
-    <button className={classes}>
+    <button className={classes} onClick={onClick}>
       {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
       {children && <span className={cx('content')}>{children}</span>}
       {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}

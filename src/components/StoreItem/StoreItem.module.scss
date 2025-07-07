@@ -1,0 +1,59 @@
+// Store
+.store {
+  display: flex;
+  column-gap: 24px;
+  cursor: pointer;
+}
+
+.store-img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.icon {
+  width: 50px;
+  font-size: 2.2rem;
+  color: #2d3250; // #333446
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emotion-icon,
+.rating-img {
+  height: 20px;
+}
+
+.cta-btn {
+  color: #2d3250;
+  font-size: 1.8rem;
+}
+
+.view-details-btn {
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: hsl(153, 60%, 18%);
+    background-color: hsl(153, 60%, 61%);
+  }
+}
+
+.directions-btn {
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: hsl(14, 78%, 18%);
+    background-color: hsl(14, 78%, 61%);
+  }
+}
+
+.contact-btn {
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: hsl(218, 90%, 18%);
+    background-color: hsl(221, 90%, 61%);
+  }
+}
