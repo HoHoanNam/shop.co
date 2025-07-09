@@ -45,7 +45,7 @@ function Home() {
 
   return (
     <Toast>
-      <div className={cx('wrapper')}>
+      <div className={classNames(cx('wrapper'), 'pb-5')}>
         <motion.div
           ref={heroBrandsRef}
           initial="hidden"
@@ -67,6 +67,7 @@ function Home() {
           </div>
         </motion.div>
 
+        {/* Cách Carousel 90px */}
         <motion.div
           ref={newArrivalsRef}
           initial="hidden"
@@ -94,7 +95,7 @@ function Home() {
           </section>
         </motion.div>
 
-        <div className="container">
+        <div className="container my-5">
           <hr />
         </div>
 
@@ -107,7 +108,7 @@ function Home() {
           {/* Top selling */}
           <section className={classNames(cx('top-selling'), 'py-5')}>
             <div className="container">
-              <h2 className={classNames(cx('top-selling-title'), 'text-center', 'py-5')}>TOP SELLING</h2>
+              <h2 className={classNames(cx('top-selling-title'), 'text-center', 'pb-5')}>TOP SELLING</h2>
               <div className="row">
                 {products.topSelling.map((product, index) => (
                   <div className="col-6 col-md-3" key={index}>
@@ -125,7 +126,7 @@ function Home() {
           </section>
         </motion.div>
 
-        <div className="container">
+        <div className="container my-5">
           <hr />
         </div>
 
@@ -141,7 +142,7 @@ function Home() {
           </Link>
         </motion.div>
 
-        <div className="container">
+        <div className="container my-5">
           <hr />
         </div>
 
@@ -156,7 +157,7 @@ function Home() {
             <div className="container">
               {/* Comment title */}
               <div className="d-flex align-items-center justify-content-between">
-                <span className={classNames(cx('comment-section-title'), 'py-5')}>OUR HAPPY CUSTOMERS</span>
+                <span className={classNames(cx('comment-section-title'), 'pb-5')}>OUR HAPPY CUSTOMERS</span>
                 <div>
                   <Button>
                     <FontAwesomeIcon icon={faChevronLeft} />

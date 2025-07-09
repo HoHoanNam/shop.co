@@ -1,0 +1,27 @@
+.wrapper {
+  gap: 16px;
+  width: 360px;
+  height: 260px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-color: #6b7894;
+
+  &:hover {
+    cursor: pointer;
+    background-color: hsl(221, 16%, 40%);
+  }
+}
+
+.service-btn {
+  color: #6b7894;
+  font-size: 2.2rem;
+}
+
+.service-desc {
+  font-size: 1.8rem;
+  color: var(--gray);
+}

@@ -6,3 +6,67 @@
   color: #6b7894;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
+
+// About us
+.model-img {
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.decs {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.sub-decs {
+  color: #6b7894;
+}
+
+.read-btn {
+  width: 160px;
+  height: 54px;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #6b7894;
+  border: 2px solid currentColor;
+  transition: all 0.3 ease;
+
+  &:hover {
+    color: var(--gray);
+    border-color: transparent;
+    background-color: #6b7894;
+  }
+}
+
+// Services
+.service-item {
+  display: inline-flex;
+  justify-content: center;
+}
+
+// Testimonials
+.testimonial {
+  gap: 16px;
+  height: 400px;
+  display: flex;
+  color: #6b7894;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid #6b7894;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--gray);
+    background-color: #6b7894;
+  }
+}
+
+.quote-icon {
+  font-size: 3rem;
+}

@@ -42,6 +42,10 @@ import store6 from './stores/store6.png';
 import store7 from './stores/store7.png';
 import store8 from './stores/store8.png';
 
+// Models
+import model1 from './models/model1.jpg';
+import model2 from './models/model2.jpg';
+
 const images = {
   payment: [visa, mastercard, paypal, applepay, googlepay],
   brands: [versace, zara, gucci, prada, calvinKlein],
@@ -68,6 +72,10 @@ const images = {
     store6,
     store7,
     store8,
+  },
+  models: {
+    model1,
+    model2,
   },
 };
 
