@@ -77,7 +77,9 @@ function Header() {
             <Link to="/cart" className="mx-3">
               <Button leftIcon={<FontAwesomeIcon icon={faCartArrowDown} />} />
             </Link>
-            <Button leftIcon={<FontAwesomeIcon icon={faUser} />} />
+            <Link to="/auth">
+              <Button leftIcon={<FontAwesomeIcon icon={faUser} />} />
+            </Link>
           </div>
         </div>
       </div>

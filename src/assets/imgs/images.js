@@ -46,6 +46,10 @@ import store8 from './stores/store8.png';
 import model1 from './models/model1.jpg';
 import model2 from './models/model2.jpg';
 
+// Auth
+import authImage from './auth.png';
+import googleLogo from './google-logo.png';
+
 const images = {
   payment: [visa, mastercard, paypal, applepay, googlepay],
   brands: [versace, zara, gucci, prada, calvinKlein],
@@ -76,6 +80,10 @@ const images = {
   models: {
     model1,
     model2,
+  },
+  auth: {
+    authImage,
+    googleLogo,
   },
 };
 
