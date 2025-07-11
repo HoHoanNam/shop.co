@@ -1,3 +1,6 @@
+// Profile avatar
+import profileAvatar from './profile-avatar.jpg';
+
 // Payment
 import visa from '~/assets/imgs/payment/visa.png';
 import paypal from '~/assets/imgs/payment/paypal.png';
@@ -51,9 +54,19 @@ import authImage from './auth.png';
 import googleLogo from './google-logo.png';
 
 const images = {
+  // Profile avatar
+  profileAvatar,
+
+  // Payment
   payment: [visa, mastercard, paypal, applepay, googlepay],
+
+  // Brands
   brands: [versace, zara, gucci, prada, calvinKlein],
+
+  // Banners
   banners: [banner1, banner2, banner3, banner4, banner5],
+
+  // Rating
   rating: {
     rating3,
     rating4,
@@ -61,12 +74,16 @@ const images = {
     rating3dot5,
     rating4dot5,
   },
+
+  // Dress styles
   dressStyle: {
     gym,
     party,
     casual,
     formal,
   },
+
+  // Stores
   stores: {
     store1,
     store2,
@@ -77,10 +94,14 @@ const images = {
     store7,
     store8,
   },
+
+  // Models
   models: {
     model1,
     model2,
   },
+
+  // Auth
   auth: {
     authImage,
     googleLogo,

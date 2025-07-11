@@ -1,0 +1,98 @@
+// Wrapper for the profile page
+.wrapper {
+  padding: 40px 0;
+  margin-top: 60px;
+  margin-bottom: -60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #e0e7ff 0%, #fdf6e3 100%);
+}
+
+// Profile container styles
+.profile-container {
+  border-radius: 20px;
+  background-color: var(--white);
+}
+
+// Avatar wrapper styles
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+
+  // Change avatar button styles
+  .change-avatar-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 12px;
+    padding: 2px 8px;
+  }
+}
+
+// Profile avatar styles
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+}
+
+// Edit button styles
+.edit-btn,
+.add-email-btn {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  background-color: var(--black);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #666;
+  }
+}
+
+.profile-form {
+  // Profile input styles
+  .profile-input {
+    height: 52px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    border-radius: 6px;
+    border-width: 1.6px;
+    background-color: #f9f9f9;
+  }
+}
+
+.profile-input {
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+  }
+}
+
+// Add email button styles
+.add-email-btn {
+  margin-top: 10px;
+}
+
+// Cancel button styles
+.edit-btn.cancel-btn {
+  background-color: #dc2525;
+
+  &:hover {
+    background-color: #b22222;
+  }
+}
+
+.edit-btn.save-btn {
+  background-color: #0065f8;
+
+  &:hover {
+    background-color: #0056d2;
+  }
+}

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartArrowDown, faHeartCircleCheck, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCartArrowDown, faHeartCircleCheck, faIdCardClip, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
@@ -79,6 +79,9 @@ function Header() {
             </Link>
             <Link to="/auth">
               <Button leftIcon={<FontAwesomeIcon icon={faUser} />} />
+            </Link>
+            <Link to="/profile" className="ms-3">
+              <Button leftIcon={<FontAwesomeIcon icon={faIdCardClip} />} />
             </Link>
           </div>
         </div>
