@@ -73,7 +73,9 @@ function Header() {
 
           {/* Actions */}
           <div className={classNames('d-flex', cx('actions'))}>
-            <Button leftIcon={<FontAwesomeIcon icon={faHeartCircleCheck} />} />
+            <Link to="/wishlist">
+              <Button leftIcon={<FontAwesomeIcon icon={faHeartCircleCheck} />} />
+            </Link>
             <Link to="/cart" className="mx-3">
               <Button leftIcon={<FontAwesomeIcon icon={faCartArrowDown} />} />
             </Link>

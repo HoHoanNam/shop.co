@@ -62,7 +62,7 @@ function Home() {
           animate={carouselInView ? 'visible' : 'hidden'}
           variants={sectionVariants}
         >
-          <div className="container mt-5 py-5">
+          <div className="container d-flex justify-content-center  mt-5 py-5">
             <Carousel />
           </div>
         </motion.div>

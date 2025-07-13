@@ -1,7 +1,7 @@
 .carousel {
   position: relative;
-  width: 1280px;
-  height: 425px;
+  width: 900px;
+  height: 300px;
   overflow: hidden;
 
   .carouselItem {
@@ -18,8 +18,8 @@
     }
 
     .carouselImage {
-      width: 1280px;
-      height: 425px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }

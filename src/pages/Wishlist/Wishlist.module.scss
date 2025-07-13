@@ -1,0 +1,110 @@
+// Wishlist.module.scss
+.wrapper {
+  padding: 40px 0;
+  background-color: hsl(220, 23%, 87%);
+  margin-bottom: -60px;
+  margin-top: var(--default-layout-header-height);
+}
+
+// Sidebar styles
+.sidebar,
+.main-content {
+  padding: 20px;
+  min-height: 300px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+
+.main-content {
+  padding: 26px;
+}
+
+// Sidebar title styles
+.sidebar-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+// Sidebar button styles
+.sidebar-btn {
+  width: 100%;
+  padding: 8px 0;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  color: var(--white);
+  background-color: #2563eb;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #1746a2;
+  }
+}
+
+// Sidebar section styles
+.sidebar-section {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+// Sidebar tags styles
+.sidebar-tags {
+  margin: 0;
+
+  .sidebar-tag {
+    padding: 6px 14px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    font-size: 1.4rem;
+    border-radius: 6px;
+    display: inline-block;
+    color: #222;
+    background-color: #f3f4f6;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #e0e7ff;
+    }
+  }
+}
+
+// Main content styles
+// Main content title styles
+.title {
+  font-weight: 700;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+// Tab bar styles
+.tab-bar {
+  display: flex;
+  row-gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+
+  // Tab button styles
+  .tab-btn {
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 6px 18px;
+    color: #666;
+    background-color: transparent;
+    border-bottom: 1.6px solid transparent;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &.active {
+      color: #2563eb;
+      background-color: #e0e7ff;
+    }
+
+    &.active {
+      border-bottom: 1.6px solid #2563eb;
+    }
+  }
+}

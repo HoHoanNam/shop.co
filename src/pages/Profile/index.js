@@ -5,6 +5,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import images from '~/assets/imgs/images';
 import styles from './Profile.module.scss';
+import Breadcrumb from '~/components/Breadcrumb';
 
 const cx = classNames.bind(styles);
 
@@ -58,6 +59,9 @@ const Profile = () => {
   return (
     <div className={cx('wrapper')}>
       <div className="container">
+        {/* Breadcrumb */}
+        <Breadcrumb />
+
         <div className={classNames(cx('profile-container'), 'shadow-lg p-5')}>
           {/* Header */}
           <div className="d-flex flex-wrap align-items-center justify-content-between mb-5">

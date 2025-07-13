@@ -7,6 +7,7 @@ import Cart from '~/pages/Cart';
 import About from '~/pages/About';
 import Profile from '~/pages/Profile';
 import Category from '~/pages/Category';
+import Wishlist from '~/pages/Wishlist';
 import ProductDetail from '~/pages/ProductDetail';
 
 const publicRoutes = [
@@ -16,7 +17,9 @@ const publicRoutes = [
   { path: '/about', component: About },
   { path: '/profile', component: Profile },
   { path: '/category', component: Category },
-  { path: '/product/:id', component: ProductDetail }, // Sửa từ /product-detail thành /product/:id
+  { path: '/wishlist', component: Wishlist },
+  // Sửa từ /product-detail thành /product/:id
+  { path: '/product/:id', component: ProductDetail },
 ];
 
 const privateRoutes = [];
