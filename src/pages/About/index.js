@@ -15,7 +15,7 @@ const { models } = images;
 
 function About() {
   return (
-    <div className={classNames(cx('wrapper'), 'py-5')}>
+    <div className={classNames(cx('wrapper'), 'pt-5')}>
       <div className="container">
         {/* Breadcrumb */}
         <Breadcrumb />

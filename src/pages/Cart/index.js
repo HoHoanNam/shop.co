@@ -19,7 +19,7 @@ function Cart() {
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
-    <section className={classNames(cx('wrapper'), 'py-5')}>
+    <section className={classNames(cx('wrapper'), 'pt-5')}>
       <div className="container">
         {/* Breadcrumb */}
         <Breadcrumb />
@@ -28,13 +28,19 @@ function Cart() {
           {/* Cart list */}
           <div className="col-md-8">
             <div className={classNames(cx('cart-list'), 'border', 'border-2', 'p-5')}>
-              {cartItems.map((cartItem, index) => (
-                <CartItem
-                  key={index}
-                  product={cartItem}
-                  onQuantityChange={(newQuantity) => updateItemQuantity(index, newQuantity)}
-                />
-              ))}
+              {cartItems.map((cartItem, index) => {
+                const separator = index < cartItems.length - 1 ? <hr className="mt-5 mb-3" /> : null;
+
+                return (
+                  <div key={index}>
+                    <CartItem
+                      product={cartItem}
+                      onQuantityChange={(newQuantity) => updateItemQuantity(index, newQuantity)}
+                    />
+                    {separator}
+                  </div>
+                );
+              })}
             </div>
           </div>
 

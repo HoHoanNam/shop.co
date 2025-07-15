@@ -11,3 +11,10 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 991.999px) {
+  .brands {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

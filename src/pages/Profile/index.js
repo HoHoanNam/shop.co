@@ -57,7 +57,7 @@ const Profile = () => {
   };
 
   return (
-    <div className={cx('wrapper')}>
+    <div className={classNames(cx('wrapper'), 'pt-5')}>
       <div className="container">
         {/* Breadcrumb */}
         <Breadcrumb />

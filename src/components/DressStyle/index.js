@@ -14,17 +14,17 @@ function DressStyle() {
 
           {/* Dress style list */}
           <div className="row g-4 justify-content-center">
-            <div className="col-auto">
-              <img src={images.dressStyle.casual} />
-            </div>
-            <div className="col-auto">
+            <div className={classNames(cx('dress-style-item'), 'col-12 col-xl-auto')}>
               <img src={images.dressStyle.formal} />
             </div>
-            <div className="col-auto">
-              <img src={images.dressStyle.party} />
-            </div>
-            <div className="col-auto">
+            <div className={classNames(cx('dress-style-item'), 'col-6 col-xl-auto')}>
               <img src={images.dressStyle.gym} />
+            </div>
+            <div className={classNames(cx('dress-style-item'), 'col-6 col-xl-auto')}>
+              <img src={images.dressStyle.casual} />
+            </div>
+            <div className={classNames(cx('dress-style-item'), 'col-12 col-xl-auto')}>
+              <img src={images.dressStyle.party} />
             </div>
           </div>
         </div>

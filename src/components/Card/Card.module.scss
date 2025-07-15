@@ -2,11 +2,20 @@
   cursor: pointer;
 }
 
-.product-img {
+.img-wrapper {
   width: 295px;
   height: 298px;
+  overflow: hidden;
+  box-shadow: var(--default-boxshadow-element);
   border-radius: var(--border-radius-product-img);
   background-color: var(--background-product-img);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .product-decs {
@@ -38,4 +47,21 @@
   border-radius: 999px;
   color: #ff3333;
   background-color: #ffebeb;
+}
+
+// Breakpoints
+// From 0 to < 768px
+@media screen and (max-width: 767.999px) {
+  .img-wrapper {
+    width: 100%;
+    height: 530px;
+  }
+}
+
+// From 768px to < 1200px
+@media screen and (min-width: 768px) and (max-width: 1199.999px) {
+  .img-wrapper {
+    width: 100%;
+    height: 350px;
+  }
 }

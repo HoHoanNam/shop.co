@@ -33,7 +33,9 @@ function Card({ product }) {
       <div className={cx('wrapper')} onClick={handleCardClick}>
         {/* Image URL */}
         <div className="mb-4">
-          <img className={cx('product-img')} src={product.imageUrl} alt={product.title} />
+          <div className={cx('img-wrapper')}>
+            <img className={cx('product-img')} src={product.imageUrl} alt={product.title} />
+          </div>
         </div>
 
         {/* Title */}

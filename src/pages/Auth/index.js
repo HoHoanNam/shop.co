@@ -75,7 +75,7 @@ function Auth() {
   };
 
   return (
-    <div className={classNames(cx('wrapper'), 'py-5')}>
+    <div className={classNames(cx('wrapper'), 'pt-5')}>
       <div className="container">
         {/* Breadcrumb */}
         <Breadcrumb />
@@ -89,7 +89,7 @@ function Auth() {
           <div className="col-12 col-md-4">
             <div className={cx('auth-content')}>
               {/* Title */}
-              <h1 className="m-0 display-4 fw-bold">{isLogin ? 'Log in to Exclusive' : 'Create an account'}</h1>
+              <h1 className="m-0 display-5 fw-bold">{isLogin ? 'Log in to Exclusive' : 'Create an account'}</h1>
 
               {/* Instruction */}
               <p className="m-0 fs-2 text-secondary">Enter your details below</p>

@@ -1,11 +1,10 @@
 // Wrapper for the profile page
 .wrapper {
-  padding: 40px 0;
-  margin-top: 60px;
-  margin-bottom: -60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: var(--default-layout-header-height);
+  padding-bottom: var(--default-layout-header-height);
   background: linear-gradient(90deg, #e0e7ff 0%, #fdf6e3 100%);
 }
 

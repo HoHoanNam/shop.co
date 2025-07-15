@@ -13,9 +13,9 @@ function Footer() {
   return (
     <footer className={classNames(cx('wrapper'), 'py-5')}>
       <div className={classNames('container')}>
-        <div className="row">
+        <div className="row g-4">
           {/* Item 1 */}
-          <div className="col-12 col-md-4">
+          <div className="col-12 col-lg-4">
             <p className={classNames(cx('footer-title'), 'navbar-logo')}>SHOP.CO</p>
             <p className="fw-light text-secondary">
               We have clothes that suits your style and <br /> which you're proud to wear. From <br /> women to men.
@@ -30,7 +30,7 @@ function Footer() {
           </div>
 
           {/* Item 2 */}
-          <div className="col-6 col-md-2">
+          <div className="col-6 col-lg-2">
             <p className={classNames(cx('footer-title', 'sub-title'))}>COMPANY</p>
             <a href="">
               <p className="fw-light text-secondary">About</p>
@@ -47,7 +47,7 @@ function Footer() {
           </div>
 
           {/* Item 3 */}
-          <div className="col-6 col-md-2">
+          <div className="col-6 col-lg-2">
             <p className={classNames(cx('footer-title', 'sub-title'))}>HELP</p>
             <a href="">
               <p className="fw-light text-secondary">Customer Support</p>
@@ -64,7 +64,7 @@ function Footer() {
           </div>
 
           {/* Item 4 */}
-          <div className="col-6 col-md-2">
+          <div className="col-6 col-lg-2">
             <p className={classNames(cx('footer-title', 'sub-title'))}>FAQ</p>
             <a href="">
               <p className="fw-light text-secondary">Account</p>
@@ -81,7 +81,7 @@ function Footer() {
           </div>
 
           {/* Item 5 */}
-          <div className="col-6 col-md-2">
+          <div className="col-6 col-lg-2">
             <p className={classNames(cx('footer-title', 'sub-title'))}>RESOURCES</p>
             <a href="">
               <p className="fw-light text-secondary">Free eBooks</p>

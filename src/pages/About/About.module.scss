@@ -1,5 +1,7 @@
 .wrapper {
   margin-top: var(--default-layout-header-height);
+  padding-bottom: var(--default-layout-header-height);
+  background: linear-gradient(90deg, #e0e7ff 0%, #fdf6e3 100%);
 }
 
 .braille {

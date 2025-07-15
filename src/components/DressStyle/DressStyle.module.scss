@@ -1,6 +1,7 @@
 .dress-style {
   border-radius: 20px;
   background-color: var(--gray);
+  box-shadow: var(--default-boxshadow-element);
 }
 
 .dress-style-title {
@@ -9,4 +10,20 @@
   text-align: center;
   margin-bottom: 40px;
   color: var(--black);
+}
+
+.dress-style-item {
+  img {
+    border-radius: 20px;
+    box-shadow: var(--default-boxshadow-element);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .dress-style-item {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

@@ -45,7 +45,7 @@ function Home() {
 
   return (
     <Toast>
-      <div className={classNames(cx('wrapper'), 'pb-5')}>
+      <div className={classNames(cx('wrapper'))}>
         <motion.div
           ref={heroBrandsRef}
           initial="hidden"
@@ -62,7 +62,7 @@ function Home() {
           animate={carouselInView ? 'visible' : 'hidden'}
           variants={sectionVariants}
         >
-          <div className="container d-flex justify-content-center  mt-5 py-5">
+          <div className="container d-flex justify-content-center mt-5 py-5">
             <Carousel />
           </div>
         </motion.div>
@@ -78,9 +78,9 @@ function Home() {
           <section className={classNames(cx('new-arrivals'), 'py-5')}>
             <div className="container">
               <h2 className={classNames(cx('new-arrivals-title'), 'text-center', 'py-5')}>NEW ARRIVALS</h2>
-              <div className="row">
+              <div className="row gy-5">
                 {products.newArrivals.map((product, index) => (
-                  <div className="col-6 col-md-3" key={index}>
+                  <div className="col-12 col-md-6 col-lg-4 col-xl-3" key={index}>
                     <Card product={product} />
                   </div>
                 ))}
@@ -109,9 +109,9 @@ function Home() {
           <section className={classNames(cx('top-selling'), 'py-5')}>
             <div className="container">
               <h2 className={classNames(cx('top-selling-title'), 'text-center', 'pb-5')}>TOP SELLING</h2>
-              <div className="row">
+              <div className="row gy-5">
                 {products.topSelling.map((product, index) => (
-                  <div className="col-6 col-md-3" key={index}>
+                  <div className="col-12 col-md-6 col-lg-4 col-xl-3" key={index}>
                     <Card product={product} />
                   </div>
                 ))}
@@ -156,9 +156,9 @@ function Home() {
           <section className={classNames(cx('comment-section'), 'py-5')}>
             <div className="container">
               {/* Comment title */}
-              <div className="d-flex align-items-center justify-content-between">
-                <span className={classNames(cx('comment-section-title'), 'pb-5')}>OUR HAPPY CUSTOMERS</span>
-                <div>
+              <div className="d-flex align-items-center justify-content-between pb-5">
+                <span className={classNames(cx('comment-section-title'))}>OUR HAPPY CUSTOMERS</span>
+                <div className="d-flex align-items-center gap-2">
                   <Button>
                     <FontAwesomeIcon icon={faChevronLeft} />
                   </Button>
@@ -169,11 +169,11 @@ function Home() {
               </div>
 
               {/* Comments */}
-              <div className="row">
+              <div className="row g-4">
                 {comments.map((comment, index) => {
                   if (index <= 2) {
                     return (
-                      <div className="col-12 col-md-4 gy-4" key={index}>
+                      <div className="col-12 col-lg-4 g-4" key={index}>
                         <Comment comment={comment} />
                       </div>
                     );

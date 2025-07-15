@@ -1,9 +1,10 @@
 .wrapper {
-  height: 180px;
+  min-height: 180px;
   padding: 30px 50px;
   border-radius: 20px;
   color: var(--white);
   background-color: var(--black);
+  box-shadow: var(--default-boxshadow-element);
 }
 
 .newsletter-content {
@@ -41,5 +42,13 @@
   &:hover {
     color: #e6e6e6;
     background-color: #999;
+  }
+}
+
+@media screen and (max-width: 1199.999px) {
+  .newsletter-content {
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
   }
 }

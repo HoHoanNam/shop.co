@@ -1,3 +1,8 @@
+.wrapper {
+  padding-bottom: var(--default-layout-header-height);
+  background: linear-gradient(90deg, #e0e7ff 0%, #fdf6e3 100%);
+}
+
 .top-selling-title,
 .new-arrivals-title,
 .comment-section-title {

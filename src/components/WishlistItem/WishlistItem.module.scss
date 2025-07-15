@@ -101,7 +101,7 @@
   flex-direction: column;
   transition: all 0.3s ease;
   background-color: #d9d2e5;
-  box-shadow: 0 2px 8px #f0f1f2;
+  box-shadow: var(--default-boxshadow-element);
 
   // 3-dot button styles
   .dot-btn {

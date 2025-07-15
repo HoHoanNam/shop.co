@@ -6,6 +6,7 @@
 }
 
 .wrapper {
+  background-color: var(--gray);
   height: var(--default-layout-header-height);
 }
 
@@ -72,5 +73,21 @@
 
   &:active {
     background-color: rgba(22, 24, 35, 0.06);
+  }
+}
+
+// Breakpoints
+@media screen and (max-width: 991.999px) {
+  .navbar-content {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--white);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: var(--default-boxshadow-element);
+  }
+
+  .search {
+    width: 100%;
   }
 }

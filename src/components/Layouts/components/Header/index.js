@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 
 function Header() {
   return (
-    <nav className={classNames('navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light', 'fixed-top', cx('wrapper'))}>
+    <nav className={classNames('navbar', 'navbar-expand-xl', 'fixed-top', cx('wrapper'))}>
       <div className="container">
         <Link className={classNames('navbar-brand', 'navbar-logo')} to="/">
           SHOP.CO
@@ -72,7 +72,7 @@ function Header() {
           </div>
 
           {/* Actions */}
-          <div className={classNames('d-flex', cx('actions'))}>
+          <div className={classNames('d-flex mt-3 mt-lg-0', cx('actions'))}>
             <Link to="/wishlist">
               <Button leftIcon={<FontAwesomeIcon icon={faHeartCircleCheck} />} />
             </Link>
