@@ -24,9 +24,9 @@ function Cart() {
         {/* Breadcrumb */}
         <Breadcrumb />
 
-        <div className="row">
+        <div className="row g-4">
           {/* Cart list */}
-          <div className="col-md-8">
+          <div className="col-xl-8">
             <div className={classNames(cx('cart-list'), 'border', 'border-2', 'p-5')}>
               {cartItems.map((cartItem, index) => {
                 const separator = index < cartItems.length - 1 ? <hr className="mt-5 mb-3" /> : null;
@@ -45,7 +45,7 @@ function Cart() {
           </div>
 
           {/* Order summary */}
-          <div className="col-md-4">
+          <div className="col-xl-4">
             <OrderSummary total={total} discountPercent={20} deliveryFee={15} />
           </div>
         </div>

@@ -43,14 +43,14 @@ function CartItem({ product, onQuantityChange }) {
     <section className={cx('wrapper')}>
       <div className="row align-items-center">
         {/* Product image */}
-        <div className="col-md-3">
+        <div className="col-lg-4 col-xl-3 mb-4 mb-lg-0">
           <div className={cx('img-wrapper')}>
             <img src={product.imageUrl} alt={product.title} className={cx('product-img')} />
           </div>
         </div>
 
         {/* Product details */}
-        <div className="col-md-9">
+        <div className="col-lg-8 col-xl-9">
           <div className={cx('product-details')}>
             {/* Product title */}
             <div className="d-flex align-items-center justify-content-between">

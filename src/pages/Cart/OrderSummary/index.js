@@ -45,14 +45,14 @@ function OrderSummary({ total, discountPercent, deliveryFee }) {
         </div>
 
         {/* Discount code */}
-        <div className="row">
-          <div className="col-md-8">
+        <div className="row g-4">
+          <div className="col-sm-8 col-lg-9 col-xl-8">
             <div className={cx('discount-code')}>
               <span className={cx('discount-icon')}>{<FontAwesomeIcon icon={faTags} />}</span>
               <input className={cx('discount-input')} placeholder="Add promo code" />
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-sm-4 col-lg-3 col-xl-4">
             <Button pill small blackStyle className={cx('apply-btn')}>
               Apply
             </Button>

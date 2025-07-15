@@ -1,6 +1,6 @@
 .img-wrapper {
   width: 100%;
-  height: 200px;
+  height: 190px;
   overflow: hidden;
   border-radius: 16px;
   background-color: #efecf4;
@@ -46,5 +46,51 @@
 
   &:hover {
     background-color: #d6d6d6;
+  }
+}
+
+// Xử lý breakpoints từ 1200px -> 1399px
+@media screen and (min-width: 1200px) and (max-width: 1399.5px) {
+  .img-wrapper {
+    height: 160px;
+  }
+}
+
+// Xử lý breakpoints từ 992 -> 1199px
+@media screen and (min-width: 992px) and (max-width: 1199.5px) {
+  .img-wrapper {
+    height: 284px;
+  }
+}
+
+// Xử lý breakpoints từ 768px -> 991px
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .img-wrapper {
+    height: 642px;
+  }
+}
+
+// Xử lý breakpoints từ 576px -> 767px
+@media screen and (max-width: 767.5px) {
+  .img-wrapper {
+    height: 462px;
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 575px
+@media screen and (max-width: 575.5px) {
+  .img-wrapper {
+    height: 0;
+    position: relative; /* Để chứa nội dung bên trong */
+    padding-bottom: 100%; /* padding-bottom bằng 100% chiều rộng */
+
+    .product-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Đảm bảo hình ảnh lấp đầy mà không méo */
+    }
   }
 }
