@@ -77,6 +77,12 @@
 }
 
 // Breakpoints
+@media screen and (max-width: 1399.999px) {
+  .search {
+    width: 480px;
+  }
+}
+
 @media screen and (max-width: 991.999px) {
   .navbar-content {
     width: 100%;

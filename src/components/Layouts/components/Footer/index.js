@@ -30,7 +30,7 @@ function Footer() {
           </div>
 
           {/* Item 2 */}
-          <div className="col-6 col-lg-2">
+          <div className="col-12 col-sm-6 col-lg-2">
             <p className={classNames(cx('footer-title', 'sub-title'))}>COMPANY</p>
             <a href="">
               <p className="fw-light text-secondary">About</p>
@@ -47,7 +47,7 @@ function Footer() {
           </div>
 
           {/* Item 3 */}
-          <div className="col-6 col-lg-2">
+          <div className="col-12 col-sm-6 col-lg-2">
             <p className={classNames(cx('footer-title', 'sub-title'))}>HELP</p>
             <a href="">
               <p className="fw-light text-secondary">Customer Support</p>
@@ -64,7 +64,7 @@ function Footer() {
           </div>
 
           {/* Item 4 */}
-          <div className="col-6 col-lg-2">
+          <div className="col-12 col-sm-6 col-lg-2">
             <p className={classNames(cx('footer-title', 'sub-title'))}>FAQ</p>
             <a href="">
               <p className="fw-light text-secondary">Account</p>
@@ -81,7 +81,7 @@ function Footer() {
           </div>
 
           {/* Item 5 */}
-          <div className="col-6 col-lg-2">
+          <div className="col-12 col-sm-6 col-lg-2">
             <p className={classNames(cx('footer-title', 'sub-title'))}>RESOURCES</p>
             <a href="">
               <p className="fw-light text-secondary">Free eBooks</p>

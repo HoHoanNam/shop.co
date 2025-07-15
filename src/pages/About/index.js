@@ -50,12 +50,12 @@ function About() {
           {/* About content */}
           <div className={classNames(cx('about-content-seciton'), 'pt-5')}>
             {/* Row 1 */}
-            <div className="row gx-5" style={{ marginBottom: 60 }}>
+            <div className="row g-5" style={{ marginBottom: 60 }}>
               {/* Image */}
-              <div className="col-md-5">
+              <div className="col-12 col-lg-5">
                 <img className={cx('model-img')} src={models.model1} alt="" />
               </div>
-              <div className="col-md-7">
+              <div className="col-12 col-lg-7">
                 {/* Title */}
                 <h3 className="display-3 text-center fw-semibold mb-3">
                   <span>History of </span>
@@ -88,7 +88,7 @@ function About() {
 
             {/* Row 2 */}
             <div className="row gx-5">
-              <div className="col-md-7">
+              <div className="col-12 col-lg-7">
                 {/* Title */}
                 <h3 className="display-3 text-center fw-semibold mb-3">
                   <span>Why Choose </span>
@@ -117,7 +117,7 @@ function About() {
                   </Button>
                 </div>
               </div>
-              <div className="col-md-5">
+              <div className="col-12 col-lg-5 mt-5 mt-lg-0">
                 {/* Image */}
                 <img className={cx('model-img')} src={models.model2} alt="" />
               </div>
@@ -143,9 +143,9 @@ function About() {
           </h3>
 
           {/* Services */}
-          <div className="row gy-5 justify-content-center pt-5">
+          <div className="row g-5 justify-content-center pt-5">
             {services.map((service) => (
-              <div className={classNames(cx('service-item'), 'col-md-4')} key={service.id}>
+              <div className={classNames(cx('service-item'), 'col-12 col-md-6 col-lg-4')} key={service.id}>
                 <ServiceItem service={service} />
               </div>
             ))}
@@ -171,9 +171,9 @@ function About() {
 
           {/* Testimonials*/}
           <div className={classNames(cx('testimonial-content'), 'pt-5')}>
-            <div className="row">
+            <div className="row gy-5">
               {testimonials.map((testimonial, index) => (
-                <div className="col-md-3" key={index}>
+                <div className="col-12 col-md-6 col-xl-3" key={index}>
                   <div className={cx('testimonial')}>
                     {/* Icon */}
                     <div className={classNames(cx('quote-icon'))}>
@@ -214,9 +214,16 @@ function About() {
 
           {/* Store list */}
           <div className="d-flex flex-column gap-5 pt-5">
-            {stores.map((store, index) => (
-              <StoreItem key={index} store={store} />
-            ))}
+            {stores.map((store, index) => {
+              const seperate = index < stores.length - 1 ? <hr style={{ marginTop: 40 }} /> : null;
+
+              return (
+                <div key={index}>
+                  <StoreItem store={store} />
+                  {seperate}
+                </div>
+              );
+            })}
           </div>
         </section>
       </div>
