@@ -72,7 +72,7 @@ function Header() {
           </div>
 
           {/* Actions */}
-          <div className={classNames('d-flex mt-3 mt-lg-0', cx('actions'))}>
+          <div className={classNames('d-flex mt-3 mt-xl-0', cx('actions'))}>
             <Link to="/wishlist">
               <Button leftIcon={<FontAwesomeIcon icon={faHeartCircleCheck} />} />
             </Link>

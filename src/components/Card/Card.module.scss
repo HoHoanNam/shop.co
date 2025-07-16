@@ -6,6 +6,7 @@
   width: 300px;
   height: 300px;
   overflow: hidden;
+  margin-bottom: 15px;
   box-shadow: var(--default-boxshadow-element);
   border-radius: var(--border-radius-product-img);
   background-color: var(--background-product-img);
@@ -50,18 +51,27 @@
 }
 
 // Breakpoints
-// From 0 to < 768px
-@media screen and (max-width: 767.999px) {
+// Xử lý breakpoints từ 1200px -> 1399px
+@media screen and (min-width: 1200px) and (max-width: 1399.5px) {
   .img-wrapper {
     width: 100%;
-    height: 530px;
+    height: 270px;
   }
 }
 
-// From 768px to < 1200px
-@media screen and (min-width: 768px) and (max-width: 1199.999px) {
+// Xử lý breakpoints từ 768px -> 1199px
+@media screen and (min-width: 768px) and (max-width: 1199.5px) {
   .img-wrapper {
     width: 100%;
     height: 350px;
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 767px
+@media screen and (max-width: 767.5) {
+  .card-wrapper {
+    .img-wrapper {
+      width: 100%;
+    }
   }
 }

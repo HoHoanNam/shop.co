@@ -54,21 +54,23 @@ function ProductDetail() {
         <Breadcrumb />
 
         {/* Product details section */}
-        <section className="row gx-5">
+        <section className="row gx-5 gy-4">
           {/* Product image */}
-          <div className="col-md-4">
-            <img className={cx('product-img')} src={product.imageUrl} alt={product.title} />
+          <div className="col-md-6 col-lg-5 col-xl-4">
+            <div className={classNames(cx('img-wrapper'))}>
+              <img className={cx('product-img')} src={product.imageUrl} alt={product.title} />
+            </div>
           </div>
 
           {/* Product details */}
-          <div className="col-md-8">
+          <div className="col-md-6 col-lg-7 col-xl-8">
             <div className={cx('product-details')}>
               {/* Title */}
-              <div className="fw-bold display-3 mb-3">{product.title}</div>
+              <div className={classNames(cx('product-title'), 'mb-3')}>{product.title}</div>
 
               {/* Rating */}
               <div className="d-flex align-items-center gap-3 mb-3">
-                <span className="fs-1 fw-bold">Rating:</span>
+                <span className={cx('section-title')}>Rating:</span>
                 <div>
                   <img
                     className={cx('rating-img')}
@@ -82,7 +84,7 @@ function ProductDetail() {
 
               {/* Price */}
               <div className="d-flex align-items-center gap-3 mb-3">
-                <span className="fs-1 fw-bold">Price:</span>
+                <span className={cx('section-title')}>Price:</span>
 
                 {hasDiscount ? (
                   <div className="d-flex align-items-center gap-3">
@@ -96,13 +98,13 @@ function ProductDetail() {
               </div>
 
               {/* Description */}
-              <div className="text-secondary">{product.description}</div>
+              <div className={classNames(cx('product-desc'), 'text-secondary')}>{product.description}</div>
 
               <hr className="my-3" />
 
               {/* Colors */}
               <div className="d-flex flex-column gap-2 mb-3">
-                <span className="fs-1 fw-bold">Select Colors:</span>
+                <span className={cx('section-title')}>Select Colors:</span>
                 <div className={cx('size-list')}>
                   {product.colors.map((colorName, index) => {
                     // Tìm mã màu tương ứng từ mảng colors
@@ -129,12 +131,14 @@ function ProductDetail() {
 
               {/* Size */}
               <div className="d-flex flex-column gap-2">
-                <span className="fs-1 fw-bold">Choose Size:</span>
-                <div className={cx('size-list')}>
+                <span className={cx('section-title')}>Choose Size:</span>
+                <div className={classNames(cx('size-list'), 'row g-4')}>
                   {product.sizes.map((item, index) => (
-                    <Button key={index} className="text-capitalize" pill grayStyle>
-                      {item}
-                    </Button>
+                    <div className={classNames(cx('size-item'), 'col-6 col-lg-3')}>
+                      <Button key={index} className={classNames(cx('size-btn'), 'text-capitalize')} pill grayStyle>
+                        {item}
+                      </Button>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -142,9 +146,9 @@ function ProductDetail() {
               <hr className="my-5" />
 
               {/* Buttons */}
-              <div className="row">
+              <div className="row g-4">
                 {/* Control button */}
-                <div className="col-md-4">
+                <div className="col-lg-4">
                   <div className={cx('controls')}>
                     <span className={classNames(cx('icon'))}>
                       <FontAwesomeIcon icon={faMinus} onClick={handleMinus} />
@@ -157,7 +161,7 @@ function ProductDetail() {
                 </div>
 
                 {/* Add button */}
-                <div className="col-md-8">
+                <div className="col-lg-8">
                   <Button className={cx('add-btn')} pill blackStyle>
                     Add to cart
                   </Button>
@@ -166,6 +170,8 @@ function ProductDetail() {
             </div>
           </div>
         </section>
+
+        <hr className="d-block d-md-none border border-black" style={{ marginTop: 60 }} />
 
         {/* Comments section */}
         <section className={cx('comments-section')}>
@@ -179,10 +185,10 @@ function ProductDetail() {
             {/* Comment buttons */}
             <div>
               <Button grayStyle className={cx('sort-btn')} leftIcon={<FontAwesomeIcon icon={faSliders} />} />
-              <Button pill grayStyle rightIcon={<FontAwesomeIcon icon={faChevronDown} />}>
+              <Button pill grayStyle className={cx('latest-btn')} rightIcon={<FontAwesomeIcon icon={faChevronDown} />}>
                 Latest
               </Button>
-              <Button pill long blackStyle>
+              <Button className={cx('write-btn')} pill long blackStyle>
                 Write a Review
               </Button>
             </div>
@@ -190,7 +196,7 @@ function ProductDetail() {
 
           <div className="row">
             {comments.map((comment, index) => (
-              <div className="col-12 col-md-4 gy-4" key={index}>
+              <div className="col-12 col-md-6 col-xl-4 gy-4" key={index}>
                 <Comment comment={comment} />
               </div>
             ))}

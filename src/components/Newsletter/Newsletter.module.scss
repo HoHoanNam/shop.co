@@ -13,6 +13,11 @@
   justify-content: space-between;
 }
 
+.newsletter-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
 .email {
   width: 350px;
   height: 48px;
@@ -45,10 +50,46 @@
   }
 }
 
-@media screen and (max-width: 1199.999px) {
+// Xử lý breakpoints từ 992px -> 1199px (lg)
+@media screen and (min-width: 992px) and (max-width: 1199.5px) {
+  .newsletter-title {
+    font-size: 3.2rem;
+  }
+}
+
+// Xử lý breakpoints từ 768px -> 991px (md)
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .newsletter-title {
+    font-size: 2.6rem;
+  }
+
+  .email,
+  .subscribe-btn {
+    width: 260px;
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 767px (none, sm)
+@media screen and (max-width: 767.5px) {
   .newsletter-content {
     gap: 30px;
     align-items: center;
     flex-direction: column;
+  }
+
+  .newsletter-title {
+    font-size: 2.8rem;
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 575px (none)
+@media screen and (max-width: 575.5px) {
+  .newsletter-title {
+    font-size: 2.4rem;
+  }
+
+  .email,
+  .subscribe-btn {
+    width: 280px;
   }
 }

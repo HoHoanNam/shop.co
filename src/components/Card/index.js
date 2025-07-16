@@ -34,10 +34,8 @@ function Card({ className, product }) {
     <Fragment>
       <div className={classes} onClick={handleCardClick}>
         {/* Image URL */}
-        <div className="mb-4">
-          <div className={cx('img-wrapper')}>
-            <img className={cx('product-img')} src={product.imageUrl} alt={product.title} />
-          </div>
+        <div className={cx('img-wrapper')}>
+          <img className={cx('product-img')} src={product.imageUrl} alt={product.title} />
         </div>
 
         {/* Title */}

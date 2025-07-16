@@ -10,15 +10,34 @@
 }
 
 // Product image
-.product-img {
+.img-wrapper {
   width: 100%;
   height: auto;
+  overflow: hidden;
   box-shadow: var(--default-boxshadow-element);
   border-radius: var(--border-radius-product-img);
   background-color: var(--background-product-img);
 }
 
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+// Title
+.product-title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
 // Rating
+.section-title {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
 .rating-img,
 .rating-number {
   height: 24px;
@@ -58,6 +77,10 @@
   align-items: center;
 }
 
+.size-btn {
+  width: 100%;
+}
+
 .gray-btn {
   border: 2px solid #ccc;
   transition: background-color 0.2s, border 0.2s;
@@ -73,7 +96,7 @@
 .controls {
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,5 +147,71 @@
   .sort-btn {
     width: 48px;
     height: 48px;
+  }
+}
+
+// Breakpoints
+// Xử lý breakpoints từ 768px -> 991px (md)
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .product-title {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .new-price {
+    font-size: 2rem;
+  }
+
+  .product-desc {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .size-item {
+    display: inline-flex;
+    justify-content: center;
+
+    .size-btn {
+      width: 160px;
+    }
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 767px (none, sm)
+@media screen and (max-width: 767.5px) {
+  .comments-stats {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 575px (none)
+@media screen and (max-width: 575.5px) {
+  .img-wrapper {
+    height: 0;
+    position: relative; /* Để chứa nội dung bên trong */
+    padding-bottom: 100%; /* padding-bottom bằng 100% chiều rộng */
+
+    .product-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Đảm bảo hình ảnh lấp đầy mà không méo */
+    }
+  }
+
+  .comments-stats {
+    .latest-btn {
+      width: 100px;
+    }
+
+    .write-btn {
+      width: 160px;
+    }
   }
 }

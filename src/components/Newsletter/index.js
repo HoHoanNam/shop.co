@@ -11,12 +11,12 @@ function Newsletter() {
   return (
     <div className={classNames(cx('wrapper'))}>
       <div className={cx('newsletter-content')}>
-        <div className="display-3 fw-bold">
+        <div className={cx('newsletter-title')}>
           STAY UPTO DATE ABOUT <br /> OUR LATEST OFFERS
         </div>
 
         {/* Subscription section */}
-        <div className="d-flex flex-column gap-3">
+        <div className="d-inline-flex flex-column gap-3">
           {/* Email */}
           <div className={cx('email')}>
             <span className={cx('email-icon')}>
