@@ -38,3 +38,39 @@
   padding: 8px 0;
   border-radius: 20px;
 }
+
+// Breakpoints
+// Xử lý breakpoints từ 992px -> 1399px (lg, xl)
+@media screen and (min-width: 992px) and (max-width: 1399.5px) {
+  .wrapper {
+    .color-btn {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .size-btn {
+    width: 96px;
+  }
+}
+
+// Xử lý breakpoints từ 768px -> 991px (md)
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .wrapper {
+    .color-btn {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .size-btn {
+    width: 160px;
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 767px (none, sm)
+@media screen and (max-width: 767.5px) {
+  .size-btn {
+    width: 128px;
+  }
+}

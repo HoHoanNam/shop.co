@@ -11,10 +11,12 @@ import { getRatingImage } from '~/assets/imgs/images';
 
 const cx = classNames.bind(styles);
 
-function Card({ product }) {
+function Card({ className, product }) {
   const hasDiscount = !!product.discount;
   const navigate = useNavigate();
   const { addToast } = useContext(ToastContext);
+
+  const classes = classNames(cx('card-wrapper'), className);
 
   const handleCardClick = () => {
     navigate(`/product/${product.id}`);
@@ -30,7 +32,7 @@ function Card({ product }) {
 
   return (
     <Fragment>
-      <div className={cx('wrapper')} onClick={handleCardClick}>
+      <div className={classes} onClick={handleCardClick}>
         {/* Image URL */}
         <div className="mb-4">
           <div className={cx('img-wrapper')}>
@@ -42,7 +44,7 @@ function Card({ product }) {
         <h4 className={classNames(cx('product-title'), 'mb-3', 'fs-2', 'fw-bold')}>{product.title}</h4>
 
         {/* Description */}
-        <p className={classNames(cx('product-decs'), 'pe-4', 'mb-3')}>{product.description}</p>
+        <p className={classNames(cx('product-desc'), 'pe-4', 'mb-3')}>{product.description}</p>
 
         {/* Rating */}
         <div className="d-flex align-items-center gap-3 mb-3">

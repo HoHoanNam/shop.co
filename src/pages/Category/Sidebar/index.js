@@ -85,8 +85,11 @@ function Sidebar() {
         <p className="fs-2 fw-bold mb-2">Colors:</p>
         <div className="row gy-2">
           {colors.map((color, index) => (
-            <div className="col-3" key={index}>
-              <Button color={color.code} large />
+            <div
+              className="col-3 col-sm-2 col-md-4 col-lg-3 d-inline-flex justify-content-center d-sm-block"
+              key={index}
+            >
+              <Button className={cx('color-btn')} color={color.code} large />
             </div>
           ))}
         </div>
@@ -98,8 +101,11 @@ function Sidebar() {
       <p className="fs-2 fw-bold mb-2">Size:</p>
       <div className="row gy-3">
         {size.map((item, index) => (
-          <div className="col-6" key={index}>
-            <Button pill grayStyle>
+          <div
+            className="col-6 col-sm-4 col-md-12 col-lg-6 d-inline-flex justify-content-center d-sm-block"
+            key={index}
+          >
+            <Button className={cx('size-btn')} pill grayStyle>
               {item}
             </Button>
           </div>

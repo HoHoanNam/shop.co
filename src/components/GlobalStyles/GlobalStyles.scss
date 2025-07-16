@@ -44,3 +44,75 @@ button,
 a[href] {
   text-decoration: none;
 }
+
+// Responsive for Category Page
+// Xử lý breakpoints từ 1200px -> 1399px (xl)
+@media screen and (min-width: 1200px) and (max-width: 1399.5px) {
+  .Card_card-wrapper__I3yXf.custom-card {
+    .Card_img-wrapper__3jsmf {
+      width: 100%;
+      height: 410px;
+    }
+  }
+}
+
+// Xử lý breakpoints từ 992px -> 1199px (lg)
+@media screen and (min-width: 992px) and (max-width: 1199.5px) {
+  .Card_card-wrapper__I3yXf.custom-card {
+    .Card_img-wrapper__3jsmf {
+      height: 302px;
+    }
+  }
+}
+
+// Xử lý breakpoints từ 768px -> 991px (md)
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .Card_card-wrapper__I3yXf.custom-card {
+    .Card_img-wrapper__3jsmf {
+      height: 222px;
+    }
+
+    .product-title {
+      white-space: nowrap; /* Ngăn văn bản xuống dòng */
+      overflow: hidden; /* Ẩn nội dung vượt quá kích thước container */
+      text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi văn bản bị cắt */
+    }
+
+    .Card_product-desc__V4s-E {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4; /* Giới hạn tối đa 4 dòng */
+      overflow: hidden; /* Ẩn nội dung vượt quá */
+      text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+    }
+  }
+}
+
+// Xử lý breakpoints từ 576px -> 767px (sm)
+@media screen and (min-width: 576px) and (max-width: 767.5px) {
+  .Card_card-wrapper__I3yXf.custom-card {
+    .Card_img-wrapper__3jsmf {
+      height: 525px;
+    }
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 575px (none)
+@media screen and (max-width: 575.5px) {
+  .Card_card-wrapper__I3yXf.custom-card {
+    .Card_img-wrapper__3jsmf {
+      height: 0;
+      position: relative; /* Để chứa nội dung bên trong */
+      padding-bottom: 100%; /* padding-bottom bằng 100% chiều rộng */
+
+      .Card_product-img__0p1T6 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Đảm bảo hình ảnh lấp đầy mà không méo */
+      }
+    }
+  }
+}

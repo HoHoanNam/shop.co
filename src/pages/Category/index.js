@@ -18,21 +18,21 @@ function Category() {
           {/* Breadcrumb */}
           <Breadcrumb />
 
-          <div className="row gx-5">
+          <div className="row g-5">
             {/* Sidebar */}
-            <div className="col-md-3">
+            <div className="col-md-4 col-xl-3">
               <Sidebar />
             </div>
 
             {/* Product list with Pagination */}
-            <div className="col-md-9">
-              <div>
+            <div className="col-md-8 col-xl-9">
+              <div className={cx('category-list')}>
                 <h1 className="display-3 fw-bold text-center text-primary-emphasis mb-5">ALL PRODUCTS</h1>
                 <Pagination
                   items={products.all}
                   itemsPerPage={9} // 9 sản phẩm mỗi trang
                   itemsPerRow={3} // 3 sản phẩm mỗi hàng
-                  renderItem={(product) => <Card product={product} />}
+                  renderItem={(product) => <Card className={cx('custom-card')} product={product} />}
                 />
               </div>
             </div>

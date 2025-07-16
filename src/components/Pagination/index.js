@@ -34,7 +34,7 @@ function Pagination({ items, itemsPerPage, itemsPerRow, renderItem }) {
       {/* Hiển thị sản phẩm */}
       <div className="row gy-5">
         {currentItems.map((item, index) => (
-          <div className={`col-md-${12 / itemsPerRow}`} key={index}>
+          <div className={`col-md-6 col-xxl-${12 / itemsPerRow}`} key={index}>
             {renderItem(item)}
           </div>
         ))}
