@@ -10,7 +10,7 @@
 .sidebar,
 .main-content {
   padding: 20px;
-  min-height: 300px;
+  min-height: 200px;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: var(--default-boxshadow-element);
@@ -84,6 +84,7 @@
 .tab-bar {
   display: flex;
   row-gap: 10px;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 15px;
 

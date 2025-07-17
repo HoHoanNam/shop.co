@@ -76,7 +76,7 @@ function Wishlist() {
                 {/* Wishlist grid using Card component, 3 per row */}
                 <div className="row justify-content-center gy-5">
                   {randomProducts.map((item) => (
-                    <div className="col-12 col-md-6 col-lg-4" key={item.id}>
+                    <div className="col-12 col-md-6 col-xl-4" key={item.id}>
                       <WishlistItem product={item} />
                     </div>
                   ))}

@@ -4,13 +4,13 @@
 // WishlistItem image styles
 .img-wrapper {
   width: 100%;
-  height: 300px;
+  height: 266px;
   overflow: hidden;
   margin-bottom: 10px;
   border-radius: 8px;
   background-color: #efecf4;
 
-  .img {
+  .wishlist-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -24,9 +24,11 @@
   font-weight: bold;
   margin-bottom: 10px;
 
-  white-space: nowrap; /* Ngăn văn bản xuống dòng */
-  overflow: hidden; /* Ẩn nội dung vượt quá kích thước container */
-  text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi văn bản bị cắt */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* Giới hạn tối đa 1 dòng */
+  overflow: hidden; /* Ẩn nội dung vượt quá */
+  text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
 }
 
 // WishlistItem description styles
@@ -107,20 +109,22 @@
   .dot-btn {
     width: 40px;
     height: 40px;
+    font-size: 2rem;
     position: absolute;
     top: 6px;
     right: 6px;
-    font-size: 2rem;
+    z-index: 100;
   }
 
   // Heart button styles
   .heart-btn {
     width: 40px;
     height: 40px;
+    font-size: 2rem;
     position: absolute;
     top: 6px;
     left: 6px;
-    font-size: 2rem;
+    z-index: 100;
     color: #e53888;
     background-color: #f7a8c4;
   }
@@ -143,7 +147,7 @@
   .modal {
     position: relative;
     padding: 32px;
-    min-width: 340px;
+    min-width: 200px;
     border-radius: 16px;
     background-color: #fff;
     box-shadow: 0 4px 24px #e0e7ff;
@@ -188,5 +192,59 @@
       cursor: pointer;
       color: #2563eb;
     }
+  }
+}
+
+// Responsive
+// Xử lý breakpoints từ 1200px -> 1399px (xl)
+@media screen and (min-width: 1200px) and (max-width: 1399.5px) {
+  .img-wrapper {
+    height: 220px;
+  }
+}
+
+// Xử lý breakpoints từ 768px -> 1199px (md, lg)
+@media screen and (min-width: 768px) and (max-width: 1199.5px) {
+  .img-wrapper {
+    height: 287px;
+  }
+}
+// Xử lý breakpoints từ 768px -> 991px (md)
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .modal {
+    max-width: 620px;
+  }
+}
+
+// Xử lý breakpoints từ 576px -> 767px (sm)
+@media screen and (min-width: 576px) and (max-width: 767.5px) {
+  .img-wrapper {
+    height: 441px;
+  }
+
+  .modal {
+    max-width: 520px;
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 575px (none)
+@media screen and (max-width: 575.5px) {
+  .img-wrapper {
+    height: 0;
+    position: relative; /* Để chứa nội dung bên trong */
+    padding-bottom: 100%; /* padding-bottom bằng 100% chiều rộng */
+
+    .wishlist-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Đảm bảo hình ảnh lấp đầy mà không méo */
+    }
+  }
+
+  .modal {
+    max-width: 320px;
   }
 }

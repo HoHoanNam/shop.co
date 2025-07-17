@@ -83,7 +83,7 @@ function Sidebar() {
       {/* Color set */}
       <div>
         <p className="fs-2 fw-bold mb-2">Colors:</p>
-        <div className="row gy-2">
+        <div className="row g-4">
           {colors.map((color, index) => (
             <div
               className="col-3 col-sm-2 col-md-4 col-lg-3 d-inline-flex justify-content-center d-sm-block"
@@ -99,7 +99,7 @@ function Sidebar() {
 
       {/* Size */}
       <p className="fs-2 fw-bold mb-2">Size:</p>
-      <div className="row gy-3">
+      <div className="row g-4">
         {size.map((item, index) => (
           <div
             className="col-6 col-sm-4 col-md-12 col-lg-6 d-inline-flex justify-content-center d-sm-block"

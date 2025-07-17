@@ -83,7 +83,9 @@ function Auth() {
         <div className="row pt-4">
           <div className="col-12 col-md-8 d-inline-flex justify-content-center">
             {/* Auth image */}
-            <img className={cx('auth-img')} src={auth.authImage} alt="Auth image" />
+            <div className={cx('img-wrapper')}>
+              <img className={cx('auth-img')} src={auth.authImage} alt="Auth image" />
+            </div>
           </div>
 
           <div className="col-12 col-md-4">

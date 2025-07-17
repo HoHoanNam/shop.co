@@ -64,7 +64,7 @@ const Profile = () => {
 
         <div className={classNames(cx('profile-container'), 'shadow-lg p-5')}>
           {/* Header */}
-          <div className="d-flex flex-wrap align-items-center justify-content-between mb-5">
+          <div className={classNames(cx('profile-header'))}>
             <div className="d-flex align-items-center gap-3">
               {/* Avatar wrapper */}
               <div className={cx('avatar-wrapper')}>
@@ -102,9 +102,11 @@ const Profile = () => {
 
             {/* Edit button */}
             {!editMode && (
-              <button type="button" className={cx('edit-btn')} onClick={handleEdit}>
-                Edit
-              </button>
+              <div className="edit-btn-wrapper">
+                <button type="button" className={cx('edit-btn')} onClick={handleEdit}>
+                  Edit
+                </button>
+              </div>
             )}
           </div>
 

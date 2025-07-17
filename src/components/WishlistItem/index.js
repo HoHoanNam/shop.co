@@ -40,7 +40,7 @@ function WishlistItem({ product }) {
 
       {/* Product image */}
       <div className={cx('img-wrapper')}>
-        <img src={product.imageUrl} alt={product.title} className={cx('img')} />
+        <img src={product.imageUrl} alt={product.title} className={cx('wishlist-img')} />
       </div>
 
       {/* Basic info */}

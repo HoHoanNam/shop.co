@@ -14,6 +14,16 @@
   background-color: var(--white);
 }
 
+// Profile header styles
+.profile-header {
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
 // Avatar wrapper styles
 .avatar-wrapper {
   position: relative;
@@ -93,5 +103,14 @@
 
   &:hover {
     background-color: #0056d2;
+  }
+}
+
+// Responsive
+// Xử lý responsive từ 0px -> 419px (none)
+@media screen and (max-width: 419.5px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
