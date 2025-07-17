@@ -81,17 +81,17 @@ function Auth() {
         <Breadcrumb />
 
         <div className="row pt-4">
-          <div className="col-12 col-md-8 d-inline-flex justify-content-center">
+          <div className="col-12 col-lg-6 d-inline-flex justify-content-center">
             {/* Auth image */}
             <div className={cx('img-wrapper')}>
               <img className={cx('auth-img')} src={auth.authImage} alt="Auth image" />
             </div>
           </div>
 
-          <div className="col-12 col-md-4">
+          <div className="col-12 col-lg-6 d-flex justify-content-center">
             <div className={cx('auth-content')}>
               {/* Title */}
-              <h1 className="m-0 display-5 fw-bold">{isLogin ? 'Log in to Exclusive' : 'Create an account'}</h1>
+              <h1 className={cx('auth-title')}>{isLogin ? 'Log in to Exclusive' : 'Create an account'}</h1>
 
               {/* Instruction */}
               <p className="m-0 fs-2 text-secondary">Enter your details below</p>

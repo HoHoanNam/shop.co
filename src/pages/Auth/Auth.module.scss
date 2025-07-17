@@ -13,22 +13,37 @@
 
 // Auth
 // Image
-.auth-img {
-  height: 600px;
-  object-fit: cover;
-  object-position: center;
+.img-wrapper {
+  width: 100%;
+  height: 645px;
+  overflow: hidden;
   border-radius: 20px;
   box-shadow: var(--default-boxshadow-element);
 }
 
+.auth-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 // Content
 .auth-content {
+  width: 80%;
   height: 100%;
   display: flex;
   gap: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+// Title
+.auth-title {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: bold;
 }
 
 // Input
@@ -138,5 +153,86 @@
 
   &:hover {
     color: #999;
+  }
+}
+
+// Responsive
+// Xử lý breakpoints từ 1200px -> 1399px (xl)
+@media screen and (min-width: 1200px) and (max-width: 1399.5px) {
+  .img-wrapper {
+    height: 555px;
+  }
+
+  .auth-content {
+    width: 90%;
+  }
+}
+
+// Xử lý breakpoints từ 992px -> 1199px (lg)
+@media screen and (min-width: 992px) and (max-width: 1199.5px) {
+  .img-wrapper {
+    height: 465px;
+  }
+
+  .auth-content {
+    width: 90%;
+  }
+}
+
+// Xử lý breakpoints từ 768px -> 991px (md)
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .img-wrapper {
+    height: auto;
+  }
+
+  .auth-content {
+    width: 90%;
+  }
+
+  .auth-title {
+    margin-top: 60px;
+  }
+}
+
+// Xử lý breakpoints từ 576px -> 767px (sm)
+@media screen and (min-width: 576px) and (max-width: 767.5px) {
+  .img-wrapper {
+    height: auto;
+  }
+
+  .auth-content {
+    width: 100%;
+  }
+
+  .auth-title {
+    margin-top: 60px;
+    font-size: 3rem;
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 575px (none)
+@media screen and (max-width: 575.5px) {
+  .img-wrapper {
+    height: 0;
+    position: relative; /* Để chứa nội dung bên trong */
+    padding-bottom: 100%; /* padding-bottom bằng 100% chiều rộng */
+
+    .auth-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Đảm bảo hình ảnh lấp đầy mà không méo */
+    }
+  }
+
+  .auth-content {
+    width: 100%;
+  }
+
+  .auth-title {
+    margin-top: 60px;
+    font-size: 2.6rem;
   }
 }
