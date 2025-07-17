@@ -10,14 +10,14 @@ function Brands() {
       <div className="container">
         <ul className={cx('brands')}>
           {images.brands.map((brand, index) => (
-            <li key={index}>
+            <li className={cx('brand-item')} key={index}>
               <a href="#">
                 <img src={brand} alt="" />
               </a>
             </li>
           ))}
         </ul>
-      </div>{' '}
+      </div>
     </div>
   );
 }

@@ -3,8 +3,8 @@
 }
 
 .img-wrapper {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 315px;
   overflow: hidden;
   margin-bottom: 15px;
   box-shadow: var(--default-boxshadow-element);
@@ -51,27 +51,58 @@
 }
 
 // Breakpoints
-// Xử lý breakpoints từ 1200px -> 1399px
+// Xử lý breakpoints từ 1200px -> 1399px (xl)
 @media screen and (min-width: 1200px) and (max-width: 1399.5px) {
   .img-wrapper {
-    width: 100%;
     height: 270px;
   }
-}
 
-// Xử lý breakpoints từ 768px -> 1199px
-@media screen and (min-width: 768px) and (max-width: 1199.5px) {
-  .img-wrapper {
-    width: 100%;
-    height: 350px;
+  .product-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Giới hạn 3 dòng */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Hiển thị "..." khi vượt quá */
   }
 }
 
-// Xử lý breakpoints từ 0px -> 767px
-@media screen and (max-width: 767.5) {
+// Xử lý breakpoints từ 992px -> 1199px (lg)
+@media screen and (min-width: 992px) and (max-width: 1199.5px) {
+  .img-wrapper {
+    height: 305px;
+  }
+}
+
+// Xử lý breakpoints từ 768px -> 991px (md)
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .img-wrapper {
+    height: 345px;
+  }
+}
+
+// Xử lý breakpoints từ 576px -> 767px (sm)
+@media screen and (min-width: 576px) and (max-width: 767.5px) {
   .card-wrapper {
     .img-wrapper {
-      width: 100%;
+      height: 525px;
+    }
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 575px (none)
+@media screen and (max-width: 575.5px) {
+  .card-wrapper {
+    .img-wrapper {
+      height: 0;
+      position: relative; /* Để chứa nội dung bên trong */
+      padding-bottom: 100%; /* padding-bottom bằng 100% chiều rộng */
+
+      .product-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover; /* Đảm bảo hình ảnh lấp đầy mà không méo */
+      }
     }
   }
 }

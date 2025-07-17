@@ -73,3 +73,58 @@
     }
   }
 }
+
+// Responsive
+// Xử lý breakpoints từ 992px -> 1199px (lg)
+@media screen and (min-width: 992px) and (max-width: 1199.5px) {
+  .carousel {
+    width: 100%;
+    height: 315px;
+  }
+}
+
+// Xử lý breakpoints từ 768px -> 991px (md)
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .carousel {
+    width: 100%;
+    height: 235px;
+
+    .indicators {
+      .indicator {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+// Xử lý breakpoints từ 576px -> 767px (sm)
+@media screen and (min-width: 576px) and (max-width: 767.5px) {
+  .carousel {
+    width: 100%;
+    height: 175px;
+
+    .indicators {
+      .indicator {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 575px (none)
+@media screen and (max-width: 575.5px) {
+  .carousel {
+    width: 100%;
+    aspect-ratio: 3 / 1; // Đảm bảo height = 1/3 width
+    height: auto; // Cho phép height tự điều chỉnh theo aspect-ratio
+
+    .indicators {
+      .indicator {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

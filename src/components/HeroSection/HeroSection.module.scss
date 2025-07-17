@@ -51,3 +51,28 @@
     background-color: var(--white); /* Tạo màu cho vạch */
   }
 }
+
+// Responsive
+// Xử lý breakpoints từ 0px -> 575px (none)
+@media screen and (max-width: 575.5px) {
+  .wrapper {
+    height: auto;
+
+    .stats {
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    .stats-item {
+      border-bottom: 1px solid var(--white);
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .stats-item + .stats-item {
+      margin-left: 0;
+    }
+  }
+}

@@ -9,3 +9,25 @@
   font-weight: bold;
   font-size: 4.8rem;
 }
+
+// Responsive
+// Xử lý breakpoints từ 768px -> 991px (md)
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .comment-section-title {
+    font-size: 3.2rem;
+  }
+}
+
+// Xử lý breakpoints từ 576px -> 767px (sm)
+@media screen and (min-width: 576px) and (max-width: 767.5px) {
+  .comment-section-title {
+    font-size: 2.6rem;
+  }
+}
+
+// Xử lý breakpoints từ 576px -> 767px (none)
+@media screen and (max-width: 575.5px) {
+  .comment-section-title {
+    font-size: 2rem;
+  }
+}

@@ -13,17 +13,71 @@
 }
 
 .dress-style-item {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow: var(--default-boxshadow-element);
+
   img {
-    border-radius: 20px;
-    box-shadow: var(--default-boxshadow-element);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 }
 
-@media screen and (max-width: 1199px) {
+// Responsive
+// Xử lý breakpoints từ 1200px -> 1399px (xl) (-96px)
+@media screen and (min-width: 1200px) and (max-width: 1399.5px) {
   .dress-style-item {
-    img {
-      width: 100%;
-      height: auto;
-    }
+    height: 300px;
+  }
+}
+
+// Xử lý breakpoints từ 992px -> 1199px (lg)
+@media screen and (min-width: 992px) and (max-width: 1199.5px) {
+  .dress-style-item {
+    height: 236px;
+    border-radius: 24px;
+  }
+}
+
+// Xử lý breakpoints từ 768px -> 991px (md)
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .dress-style-title {
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+  }
+
+  .dress-style-item {
+    height: 152px;
+    border-radius: 20px;
+  }
+}
+
+// Xử lý breakpoints từ 576px -> 767px (sm)
+@media screen and (min-width: 576px) and (max-width: 767.5px) {
+  .dress-style-title {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+  }
+
+  .dress-style-item {
+    height: 88px;
+    border-radius: 16px;
+  }
+}
+
+// Xử lý breakpoints từ 0px -> 575px (none)
+@media screen and (max-width: 575.5px) {
+  .dress-style-title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .dress-style-item {
+    height: auto;
+    border-radius: 16px;
   }
 }
