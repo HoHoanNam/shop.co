@@ -306,6 +306,86 @@ const products = {
       colors: ['beige'],
       sizes: ['small', 'medium', 'large', 'x-large'],
     },
+    {
+      id: uuidv4(),
+      imageUrl: images.louisPhilippeSport,
+      title: 'Louis Philippe Sport',
+      description:
+        'Stylish long-sleeve sport shirt with a minimalist design and comfortable fit, perfect for casual or active wear.',
+      rating: 4.5,
+      price: 180,
+      discount: null,
+      colors: ['gray', 'blue', 'brown'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      id: uuidv4(),
+      imageUrl: images.usPolo,
+      title: 'US Polo',
+      description:
+        'Stylish short-sleeve shirt with a vibrant floral pattern, perfect for casual summer outings or relaxed settings.',
+      rating: 5.0,
+      price: 212,
+      discount: {
+        originalPrice: 250,
+        percentage: 15,
+        newPrice: 212,
+      },
+      colors: ['blue', 'red', 'green'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      id: uuidv4(),
+      imageUrl: images.modernTweedJacket,
+      title: 'Modern Tweed Jacket',
+      description:
+        'Elegant tweed jacket with a modern design, featuring black sleeves and textured fabric, ideal for formal or semi-formal occasions.',
+      rating: 4.5,
+      price: 150,
+      discount: null,
+      colors: ['gray', 'blue', 'black'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      id: uuidv4(),
+      imageUrl: images.ykDisney,
+      title: 'YK Disney',
+      description:
+        'Cozy hoodie featuring a vibrant Disney print, perfect for casual wear and Disney fans, with a warm and comfortable fit.',
+      rating: 4.5,
+      price: 220,
+      discount: {
+        originalPrice: 260,
+        percentage: 15,
+        newPrice: 220,
+      },
+      colors: ['red', 'blue', 'black'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      id: uuidv4(),
+      imageUrl: images.roadStar,
+      title: 'Roadstar',
+      description:
+        'Unique short-sleeve t-shirt featuring a triptych design with bold, artistic illustrations, perfect for casual streetwear.',
+      rating: 4.0,
+      price: 195,
+      discount: null,
+      colors: ['black', 'red', 'blue'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
+    {
+      id: uuidv4(),
+      imageUrl: images.allenSolly,
+      title: 'Allen Solly',
+      description:
+        'Rugged long-sleeve jacket with a high collar and multiple pockets, perfect for outdoor adventures or cold weather.',
+      rating: 4.5,
+      price: 245,
+      discount: null,
+      colors: ['brown', 'navy', 'black'],
+      sizes: ['small', 'medium', 'large', 'x-large'],
+    },
   ],
 };
 

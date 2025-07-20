@@ -45,6 +45,17 @@ a[href] {
   text-decoration: none;
 }
 
+// Card decs in Category Page
+.Card_card-wrapper__I3yXf.custom-card {
+  .Card_product-desc__V4s-E {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Giới hạn tối đa 3 dòng */
+    overflow: hidden; /* Ẩn nội dung vượt quá */
+    text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+  }
+}
+
 // Responsive for Category Page
 // Xử lý breakpoints từ 1200px -> 1399px (xl)
 @media screen and (min-width: 1200px) and (max-width: 1399.5px) {
@@ -76,14 +87,6 @@ a[href] {
       white-space: nowrap; /* Ngăn văn bản xuống dòng */
       overflow: hidden; /* Ẩn nội dung vượt quá kích thước container */
       text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi văn bản bị cắt */
-    }
-
-    .Card_product-desc__V4s-E {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4; /* Giới hạn tối đa 4 dòng */
-      overflow: hidden; /* Ẩn nội dung vượt quá */
-      text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
     }
   }
 }

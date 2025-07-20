@@ -1,6 +1,10 @@
+import usPolo from './us-polo.png';
+import ykDisney from './yk-disney.png';
+import roadStar from './road-star.png';
 import poloTrims from './polo-trims.png';
 import fadedJeans from './faded-jeans.png';
 import grayBlazer from './gray-blazer.png';
+import allenSolly from './allen-solly.png';
 import blackTshirt from './black-tshirt.png';
 import looseShorts from './loose-shorts.png';
 import skinnyJeans from './skinny-jeans.png';
@@ -17,13 +21,19 @@ import beigeTrenchCoat from './beige-trench-coat.png';
 import cottonTurtleneck from './cotton-turtleneck.png';
 import tailoredBlackPant from './tailored-black-pant.png';
 import beigeKnitCardigan from './beige-knit-cardigan.png';
+import modernTweedJacket from './modern-tweed-jacket.png';
 import beigeCableCardigan from './beige-cable-cardigan.png';
+import louisPhilippeSport from './louis-philippe-sport.png';
 import organicCottonTurtleneck from './organic-cotton-turtleneck.png';
 
 const images = {
+  usPolo,
+  ykDisney,
+  roadStar,
   poloTrims,
   fadedJeans,
   grayBlazer,
+  allenSolly,
   blackTshirt,
   looseShorts,
   skinnyJeans,
@@ -40,7 +50,9 @@ const images = {
   cottonTurtleneck,
   tailoredBlackPant,
   beigeKnitCardigan,
+  modernTweedJacket,
   beigeCableCardigan,
+  louisPhilippeSport,
   organicCottonTurtleneck,
 };
 
