@@ -138,7 +138,9 @@ function Home() {
         >
           {/* Dress style */}
           <Link to="/category">
-            <DressStyle />
+            <div className="d-flex justify-content-center">
+              <DressStyle />
+            </div>
           </Link>
         </motion.div>
 
