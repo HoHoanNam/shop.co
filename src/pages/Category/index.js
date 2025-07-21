@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { useState, useEffect } from 'react';
 
 import Sidebar from './Sidebar';
 import { products } from '~/data';
@@ -11,6 +12,45 @@ import styles from './Category.module.scss';
 const cx = classNames.bind(styles);
 
 function Category() {
+  const [itemsPerRow, setItemsPerRow] = useState(3);
+  const [itemsPerPage, setItemsPerPage] = useState(9);
+
+  // Hàm xử lý responsive
+  const handleResize = () => {
+    if (window.innerWidth >= 1400) {
+      setItemsPerRow(3);
+      setItemsPerPage(9);
+    } else if (window.innerWidth >= 768 && window.innerWidth < 1400) {
+      setItemsPerRow(2);
+      setItemsPerPage(8);
+    } else if (window.innerWidth < 768) {
+      setItemsPerRow(1);
+      setItemsPerPage(6);
+    }
+  };
+
+  function debounce(fn, delay) {
+    let timeoutId;
+    return (...args) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => fn(...args), delay);
+    };
+  }
+
+  const debouncedHandleResize = debounce(handleResize, 100);
+
+  // Thêm và dọn dẹp event listener
+  useEffect(() => {
+    // Gọi hàm ngay khi mount để set giá trị ban đầu
+    handleResize();
+
+    // Thêm event listener cho resize
+    window.addEventListener('resize', debouncedHandleResize);
+
+    // Dọn dẹp event listener khi component unmount
+    return () => window.removeEventListener('resize', debouncedHandleResize);
+  }, []);
+
   return (
     <Toast>
       <div className={classNames(cx('wrapper'), 'pt-5')}>
@@ -30,8 +70,8 @@ function Category() {
                 <h1 className="display-3 fw-bold text-center text-primary-emphasis mb-5">ALL PRODUCTS</h1>
                 <Pagination
                   items={products.all}
-                  itemsPerPage={9} // 9 sản phẩm mỗi trang
-                  itemsPerRow={3} // 3 sản phẩm mỗi hàng
+                  itemsPerRow={itemsPerRow}
+                  itemsPerPage={itemsPerPage}
                   renderItem={(product) => <Card className={cx('custom-card')} product={product} />}
                 />
               </div>

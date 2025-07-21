@@ -1,7 +1,7 @@
-import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { motion, useInView } from 'framer-motion';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -43,6 +43,62 @@ function Home() {
   const commentSectionInView = useInView(commentSectionRef, { once: true, margin: '-100px' });
   const newsletterInView = useInView(newsletterRef, { once: true, margin: '-100px' });
 
+  const [itemsPerRow, setItemsPerRow] = useState(4);
+  const [itemsPerBreakpoint, setItemsPerBreakpoint] = useState(4);
+
+  const handleResize = () => {
+    if (window.innerWidth >= 1200) {
+      setItemsPerRow(4);
+      setItemsPerBreakpoint(4);
+    } else if (window.innerWidth >= 992 && window.innerWidth < 1200) {
+      setItemsPerRow(3);
+      setItemsPerBreakpoint(6);
+    } else if (window.innerWidth >= 768 && window.innerWidth < 992) {
+      setItemsPerRow(2);
+      setItemsPerBreakpoint(6);
+    } else {
+      setItemsPerRow(1);
+      setItemsPerBreakpoint(6);
+    }
+  };
+
+  const getColClass = () => {
+    switch (itemsPerRow) {
+      case 4:
+        return 'col-12 col-md-6 col-lg-4 col-xl-3';
+      case 3:
+        return 'col-12 col-md-6 col-lg-4';
+      case 2:
+        return 'col-12 col-md-6';
+      case 1:
+        return 'col-12';
+      default:
+        return 'col-12 col-md-6 col-lg-4 col-xl-3';
+    }
+  };
+
+  function debounce(fn, delay) {
+    let timeoutId;
+    return (...args) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => fn(...args), delay);
+    };
+  }
+
+  const debouncedHandleResize = debounce(handleResize, 100);
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', debouncedHandleResize);
+
+    // Cleanup function
+    return () => window.removeEventListener('resize', debouncedHandleResize);
+  }, []);
+
+  // Slice product lists based on itemsPerBreakpoint
+  const newArrivalsItems = useMemo(() => products.newArrivals.slice(0, itemsPerBreakpoint), [itemsPerBreakpoint]);
+  const topSellingItems = useMemo(() => products.topSelling.slice(0, itemsPerBreakpoint), [itemsPerBreakpoint]);
+
   return (
     <Toast>
       <div className={classNames(cx('wrapper'))}>
@@ -79,8 +135,8 @@ function Home() {
             <div className="container">
               <h2 className={classNames(cx('new-arrivals-title'), 'text-center', 'py-5')}>NEW ARRIVALS</h2>
               <div className="row gy-5">
-                {products.newArrivals.map((product, index) => (
-                  <div className="col-12 col-md-6 col-lg-4 col-xl-3" key={index}>
+                {newArrivalsItems.map((product, index) => (
+                  <div className={getColClass()} key={index}>
                     <Card product={product} />
                   </div>
                 ))}
@@ -110,8 +166,8 @@ function Home() {
             <div className="container">
               <h2 className={classNames(cx('top-selling-title'), 'text-center', 'pb-5')}>TOP SELLING</h2>
               <div className="row gy-5">
-                {products.topSelling.map((product, index) => (
-                  <div className="col-12 col-md-6 col-lg-4 col-xl-3" key={index}>
+                {topSellingItems.map((product, index) => (
+                  <div className={getColClass()} key={index}>
                     <Card product={product} />
                   </div>
                 ))}

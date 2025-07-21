@@ -1,6 +1,8 @@
 .pagination {
   gap: 10px;
   margin-top: 50px;
+  flex-wrap: wrap; // Cho phép các nút xuống dòng trên thiết bị nhỏ
+  justify-content: center;
 
   .page-btn {
     padding: 8px 16px;
@@ -10,6 +12,9 @@
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.3s ease;
+    font-size: 16px;
+    min-width: 40px; // Đảm bảo nút có chiều rộng tối thiểu
+    text-align: center;
 
     &:hover:not(.disabled) {
       background-color: #007bff;
@@ -26,6 +31,29 @@
     &.disabled {
       cursor: not-allowed;
       opacity: 0.5;
+    }
+  }
+
+  .ellipsis {
+    padding: 8px 16px;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Điều chỉnh cho thiết bị nhỏ
+@media screen and (max-width: 767.5px) {
+  .pagination {
+    gap: 5px; // Giảm khoảng cách giữa các nút
+    margin-top: 30px;
+
+    .page-btn,
+    .ellipsis {
+      padding: 6px 12px; // Giảm kích thước nút
+      font-size: 14px; // Giảm kích thước chữ
+      min-width: 36px;
     }
   }
 }

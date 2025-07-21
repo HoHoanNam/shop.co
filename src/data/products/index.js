@@ -57,9 +57,6 @@ const newArrivals = [
     colors: ['green', 'brown', 'gray'],
     sizes: ['small', 'medium', 'large', 'x-large'],
   },
-];
-
-const topSelling = [
   {
     id: uuidv4(),
     imageUrl: images.verticalShirt,
@@ -84,6 +81,63 @@ const topSelling = [
       'Bold graphic T-shirt featuring a “Courage” print. Made from soft cotton for all-day comfort and style.',
     rating: 4.0,
     price: 145,
+    discount: null,
+    colors: ['green', 'brown', 'gray'],
+    sizes: ['small', 'medium', 'large', 'x-large'],
+  },
+];
+
+const topSelling = [
+  {
+    id: uuidv4(),
+    imageUrl: images.poloTrims,
+    title: 'Polo with Contrast Trims',
+    description: 'Classic polo shirt with standout contrast trims. Sleek, refined, and perfect for smart-casual style.',
+    rating: 4.0,
+    price: 160,
+    discount: {
+      originalPrice: 200,
+      percentage: 20,
+      newPrice: 160,
+    },
+    colors: ['green', 'blue', 'gray'],
+    sizes: ['small', 'medium', 'large', 'x-large'],
+  },
+  {
+    id: uuidv4(),
+    imageUrl: images.gradientTshirt,
+    title: 'Gradient Graphic T-shirt',
+    description:
+      'Eye-catching T-shirt with a bold gradient graphic. Soft, breathable, and perfect for standout casual looks.',
+    rating: 4.0,
+    price: 105,
+    discount: {
+      originalPrice: 150,
+      percentage: 30,
+      newPrice: 105,
+    },
+    colors: ['green', 'brown', 'gray'],
+    sizes: ['small', 'medium', 'large', 'x-large'],
+  },
+  {
+    id: uuidv4(),
+    imageUrl: images.poloDetails,
+    title: 'Polo with Tipping Details',
+    description:
+      'Classic polo featuring subtle tipping on the collar and sleeves. Clean, stylish, and perfect for any casual occasion.',
+    rating: 5.0,
+    price: 280,
+    discount: null,
+    colors: ['green', 'blue', 'gray'],
+    sizes: ['small', 'medium', 'large', 'x-large'],
+  },
+  {
+    id: uuidv4(),
+    imageUrl: images.cottonTurtleneck,
+    title: 'Organic Cotton Turtleneck',
+    description: 'Soft organic cotton turtleneck with subtle stripes, perfect for comfortable and versatile styling.',
+    rating: 3.5,
+    price: 176,
     discount: null,
     colors: ['green', 'brown', 'gray'],
     sizes: ['small', 'medium', 'large', 'x-large'],
@@ -118,61 +172,6 @@ const products = {
   all: [
     ...newArrivals,
     ...topSelling,
-    {
-      id: uuidv4(),
-      imageUrl: images.poloTrims,
-      title: 'Polo with Contrast Trims',
-      description:
-        'Classic polo shirt with standout contrast trims. Sleek, refined, and perfect for smart-casual style.',
-      rating: 4.0,
-      price: 160,
-      discount: {
-        originalPrice: 200,
-        percentage: 20,
-        newPrice: 160,
-      },
-      colors: ['green', 'blue', 'gray'],
-      sizes: ['small', 'medium', 'large', 'x-large'],
-    },
-    {
-      id: uuidv4(),
-      imageUrl: images.gradientTshirt,
-      title: 'Gradient Graphic T-shirt',
-      description:
-        'Eye-catching T-shirt with a bold gradient graphic. Soft, breathable, and perfect for standout casual looks.',
-      rating: 4.0,
-      price: 105,
-      discount: {
-        originalPrice: 150,
-        percentage: 30,
-        newPrice: 105,
-      },
-      colors: ['green', 'brown', 'gray'],
-      sizes: ['small', 'medium', 'large', 'x-large'],
-    },
-    {
-      id: uuidv4(),
-      imageUrl: images.poloDetails,
-      title: 'Polo with Tipping Details',
-      description:
-        'Classic polo featuring subtle tipping on the collar and sleeves. Clean, stylish, and perfect for any casual occasion.',
-      rating: 5.0,
-      price: 280,
-      discount: null,
-      colors: ['green', 'blue', 'gray'],
-      sizes: ['small', 'medium', 'large', 'x-large'],
-    },
-    {
-      id: uuidv4(),
-      imageUrl: images.cottonTurtleneck,
-      title: 'Organic Cotton Turtleneck',
-      description: 'Soft organic cotton turtleneck with subtle stripes, perfect for comfortable and versatile styling.',
-      rating: 3.5,
-      price: 176,
-      discount: null,
-      colors: ['green', 'brown', 'gray'],
-      sizes: ['small', 'medium', 'large', 'x-large'],
-    },
     {
       id: uuidv4(),
       imageUrl: images.organicCottonTurtleneck,
