@@ -82,6 +82,25 @@
   background-color: var(--gray);
 }
 
+// Wishlist style
+.square.wishlistStyle {
+  width: 160px;
+}
+
+.wishlistStyle {
+  color: #fdd3df;
+  border: transparent;
+  background-color: #f33f96;
+  transition: opacity 0.2s, transform 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+    color: #fdd3df;
+    transform: scale(1.1);
+    background-color: #f33f96;
+  }
+}
+
 /* Class cho từng màu và viền đậm hơn 20% */
 .green {
   background-color: #00c12b;
@@ -225,4 +244,14 @@
 }
 .border-navy {
   border: 2px solid #333876;
+}
+
+// Responsive
+// Xử lý breakpoints từ 1200px -> 1399px (xl)
+@media screen and (min-width: 1200px) and (max-width: 1399.5px) {
+  .square.blackStyle,
+  .square.wishlistStyle {
+    width: auto;
+    padding: 0 7px;
+  }
 }

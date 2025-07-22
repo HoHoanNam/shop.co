@@ -134,8 +134,8 @@ function ProductDetail() {
                 <span className={cx('section-title')}>Choose Size:</span>
                 <div className={classNames(cx('size-list'), 'row g-4')}>
                   {product.sizes.map((item, index) => (
-                    <div className={classNames(cx('size-item'), 'col-6 col-lg-3')}>
-                      <Button key={index} className={classNames(cx('size-btn'), 'text-capitalize')} pill grayStyle>
+                    <div className={classNames(cx('size-item'), 'col-6 col-lg-3')} key={index}>
+                      <Button className={classNames(cx('size-btn'), 'text-capitalize')} pill grayStyle>
                         {item}
                       </Button>
                     </div>

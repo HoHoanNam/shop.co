@@ -64,6 +64,14 @@ a[href] {
       width: 100%;
       height: 410px;
     }
+
+    .Card_product-desc__V4s-E {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
+      overflow: hidden; /* Ẩn nội dung vượt quá */
+      text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+    }
   }
 }
 
@@ -87,6 +95,21 @@ a[href] {
       white-space: nowrap; /* Ngăn văn bản xuống dòng */
       overflow: hidden; /* Ẩn nội dung vượt quá kích thước container */
       text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi văn bản bị cắt */
+    }
+
+    // Style cho nút Buy now và Add to Wishlist
+    ~ .Card_buttons__fSQvW {
+      flex-direction: column;
+
+      .Card_button__jIqww {
+        width: 100%;
+
+        .Button_square__i7jDA.Button_blackStyle__tZ8RZ,
+        .Button_square__i7jDA.Button_wishlistStyle__JKN3x {
+          width: 100%;
+          padding: 0 8px; // Giảm padding
+        }
+      }
     }
   }
 }

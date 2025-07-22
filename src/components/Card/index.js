@@ -2,7 +2,7 @@ import { Fragment, useContext } from 'react';
 import classNames from 'classnames/bind';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Card.module.scss';
 import Button from '~/components/Button';
@@ -26,6 +26,14 @@ function Card({ className, product }) {
     addToast({
       type: 'success',
       content: 'Product has been added to cart!',
+      duration: 3000, // Có thể tùy chỉnh duration tại đây
+    });
+  };
+
+  const handleAddToWishlist = () => {
+    addToast({
+      type: 'wishlist',
+      content: 'Product has been added to wishlist!',
       duration: 3000, // Có thể tùy chỉnh duration tại đây
     });
   };
@@ -66,11 +74,20 @@ function Card({ className, product }) {
         </div>
       </div>
 
-      {/* Buy button */}
-      <div className="d-inline-block" onClick={handleBuyNow}>
-        <Button square blackStyle leftIcon={<FontAwesomeIcon icon={faCartPlus} />}>
-          Buy now
-        </Button>
+      <div className={cx('buttons')}>
+        {/* Buy button */}
+        <div className={cx('button')} onClick={handleBuyNow}>
+          <Button square blackStyle leftIcon={<FontAwesomeIcon icon={faCartPlus} />}>
+            Buy now
+          </Button>
+        </div>
+
+        {/* Wishlist button */}
+        <div className={cx('button')} onClick={handleAddToWishlist}>
+          <Button square wishlistStyle leftIcon={<FontAwesomeIcon icon={faHandHoldingHeart} />}>
+            Add to Wishlist
+          </Button>
+        </div>
       </div>
     </Fragment>
   );

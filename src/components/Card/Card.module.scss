@@ -50,6 +50,20 @@
   background-color: #ffebeb;
 }
 
+.buttons {
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 // Breakpoints
 // Xử lý breakpoints từ 1200px -> 1399px (xl)
 @media screen and (min-width: 1200px) and (max-width: 1399.5px) {

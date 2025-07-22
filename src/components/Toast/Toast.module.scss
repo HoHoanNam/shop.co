@@ -47,6 +47,11 @@
   background-color: hsl(221, 90%, 67%);
 }
 
+.toast-message.toast-wishlist {
+  color: #fdd3df;
+  background-color: #f33f96;
+}
+
 // Keyframes cho animation
 @keyframes slideInLeft {
   from {
@@ -68,4 +73,16 @@
 // Class để kích hoạt animation fadeOut
 .fade-out {
   animation: fadeOut linear 1s forwards;
+}
+
+// Responsive
+// Xử lý breakpoint từ 0px -> 575px (none)
+@media screen and (max-width: 575.5px) {
+  .toast-wrapper {
+    right: 22px;
+  }
+
+  .toast-message {
+    width: 300px;
+  }
 }

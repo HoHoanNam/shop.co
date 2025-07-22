@@ -49,7 +49,7 @@ function Category() {
 
     // Dọn dẹp event listener khi component unmount
     return () => window.removeEventListener('resize', debouncedHandleResize);
-  }, []);
+  }, [debouncedHandleResize]);
 
   return (
     <Toast>

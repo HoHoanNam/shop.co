@@ -31,6 +31,7 @@ function Button({
   long,
   grayStyle,
   blackStyle,
+  wishlistStyle,
   color,
   onClick,
 }) {
@@ -46,6 +47,7 @@ function Button({
       large,
       grayStyle,
       blackStyle,
+      wishlistStyle,
       [borderClass]: borderClass,
       [backgroundClass]: backgroundClass,
     }),

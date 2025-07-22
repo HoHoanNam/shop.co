@@ -93,7 +93,7 @@ function Home() {
 
     // Cleanup function
     return () => window.removeEventListener('resize', debouncedHandleResize);
-  }, []);
+  }, [debouncedHandleResize]);
 
   // Slice product lists based on itemsPerBreakpoint
   const newArrivalsItems = useMemo(() => products.newArrivals.slice(0, itemsPerBreakpoint), [itemsPerBreakpoint]);

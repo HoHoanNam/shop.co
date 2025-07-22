@@ -5,6 +5,7 @@ import {
   faCircleExclamation,
   faCircleInfo,
   faCircleXmark,
+  faFaceKissWinkHeart,
   faTriangleExclamation,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,6 +24,8 @@ function ToastMessage({ toast, onClose }) {
         return <FontAwesomeIcon icon={faTriangleExclamation} />;
       case 'info':
         return <FontAwesomeIcon icon={faCircleInfo} />;
+      case 'wishlist':
+        return <FontAwesomeIcon icon={faFaceKissWinkHeart} />;
       default:
         return null;
     }
@@ -38,6 +41,8 @@ function ToastMessage({ toast, onClose }) {
         return 'toast-warning';
       case 'info':
         return 'toast-info';
+      case 'wishlist':
+        return 'toast-wishlist';
       default:
         return null;
     }
@@ -48,11 +53,11 @@ function ToastMessage({ toast, onClose }) {
       {/* Header */}
       <div className={classNames(cx('toast-header'), 'row align-items-center mb-3')}>
         {/* Icon */}
-        <div className="col-md-2">{getToastIcon()}</div>
+        <div className="col-2">{getToastIcon()}</div>
         {/* Type */}
-        <div className="col-md-8 fw-semibold text-capitalize">{toast.type}</div>
+        <div className="col-8 fw-semibold text-capitalize">{toast.type}</div>
         {/* Close button */}
-        <div className="col-md-2 d-inline-flex justify-content-end">
+        <div className="col-2 d-inline-flex justify-content-end">
           <span className={cx('close-btn')} onClick={() => onClose(toast.id)}>
             <FontAwesomeIcon icon={faCircleXmark} />
           </span>
@@ -61,9 +66,9 @@ function ToastMessage({ toast, onClose }) {
 
       {/* Content */}
       <div className="row">
-        <div className="col-md-2"></div>
-        <div className="col-md-8 fs-2">{toast.content}</div>
-        <div className="col-md-2"></div>
+        <div className="col-2"></div>
+        <div className="col-8 fs-2">{toast.content}</div>
+        <div className="col-2"></div>
       </div>
     </div>
   );
