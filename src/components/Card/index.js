@@ -84,7 +84,12 @@ function Card({ className, product }) {
 
         {/* Wishlist button */}
         <div className={cx('button')} onClick={handleAddToWishlist}>
-          <Button square wishlistStyle leftIcon={<FontAwesomeIcon icon={faHandHoldingHeart} />}>
+          <Button
+            square
+            wishlistStyle
+            className={cx('wishlist-btn')}
+            leftIcon={<FontAwesomeIcon icon={faHandHoldingHeart} />}
+          >
             Add to Wishlist
           </Button>
         </div>
