@@ -83,11 +83,9 @@ a[href] {
     }
 
     .product-title {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 1; /* Giới hạn tối đa 1 dòng */
-      overflow: hidden; /* Ẩn nội dung vượt quá */
-      text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+      white-space: nowrap; /* Ngăn văn bản xuống dòng */
+      overflow: hidden; /* Ẩn nội dung vượt quá kích thước container */
+      text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi văn bản bị cắt */
     }
   }
 }
@@ -172,14 +170,14 @@ a[href] {
       width: 100%;
       height: 410px;
     }
-  }
 
-  .Card_product-desc__7GaIC {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
-    overflow: hidden; /* Ẩn nội dung vượt quá */
-    text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+    .Card_product-desc__7GaIC {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
+      overflow: hidden; /* Ẩn nội dung vượt quá */
+      text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+    }
   }
 }
 
@@ -191,11 +189,9 @@ a[href] {
     }
 
     .product-title {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 1; /* Giới hạn tối đa 1 dòng */
-      overflow: hidden; /* Ẩn nội dung vượt quá */
-      text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+      white-space: nowrap; /* Ngăn văn bản xuống dòng */
+      overflow: hidden; /* Ẩn nội dung vượt quá kích thước container */
+      text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi văn bản bị cắt */
     }
   }
 }
@@ -206,7 +202,6 @@ a[href] {
     .Card_img-wrapper__r7wY2 {
       height: 222px;
     }
-
     .product-title {
       white-space: nowrap; /* Ngăn văn bản xuống dòng */
       overflow: hidden; /* Ẩn nội dung vượt quá kích thước container */
