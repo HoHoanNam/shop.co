@@ -45,10 +45,9 @@ a[href] {
   text-decoration: none;
 }
 
-// Card decs in Category Page
+// Card decs in Category Page - Local host (lg, xxl)
 .Card_card-wrapper__I3yXf.custom-card {
-  .Card_product-desc__V4s-E,
-  .Card_product-desc__7GaIC {
+  .Card_product-desc__V4s-E {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3; /* Giới hạn tối đa 3 dòng */
@@ -81,6 +80,14 @@ a[href] {
   .Card_card-wrapper__I3yXf.custom-card {
     .Card_img-wrapper__3jsmf {
       height: 302px;
+    }
+
+    .product-title {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1; /* Giới hạn tối đa 1 dòng */
+      overflow: hidden; /* Ẩn nội dung vượt quá */
+      text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
     }
   }
 }
@@ -146,6 +153,17 @@ a[href] {
   }
 }
 
+// Card decs in Category Page - Vercel (lg, xxl)
+.Card_card-wrapper__6RKhO.custom-card {
+  .Card_product-desc__7GaIC {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Giới hạn tối đa 3 dòng */
+    overflow: hidden; /* Ẩn nội dung vượt quá */
+    text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+  }
+}
+
 // Responsive for Category Page - Vercel
 // Xử lý breakpoints từ 1200px -> 1399px (xl)
 @media screen and (min-width: 1200px) and (max-width: 1399.5px) {
@@ -155,6 +173,14 @@ a[href] {
       height: 410px;
     }
   }
+
+  .Card_product-desc__7GaIC {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
+    overflow: hidden; /* Ẩn nội dung vượt quá */
+    text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+  }
 }
 
 // Xử lý breakpoints từ 992px -> 1199px (lg)
@@ -162,6 +188,14 @@ a[href] {
   .Card_card-wrapper__6RKhO.custom-card {
     .Card_img-wrapper__r7wY2 {
       height: 302px;
+    }
+
+    .product-title {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1; /* Giới hạn tối đa 1 dòng */
+      overflow: hidden; /* Ẩn nội dung vượt quá */
+      text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
     }
   }
 }
@@ -191,6 +225,8 @@ a[href] {
       flex-direction: column;
 
       .Card_button__hEwJW {
+        width: 100%;
+
         .Button_square__R92FB.Button_blackStyle__Sc531,
         .Button_square__R92FB.wishlist-btn {
           width: 100%;
