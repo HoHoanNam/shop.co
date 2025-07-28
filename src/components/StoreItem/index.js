@@ -75,17 +75,17 @@ function StoreItem({ store }) {
         </div>
 
         {/* Contact */}
-        <div className="d-flex align-items-center fs-2 mb-3">
-          <div className="d-flex align-items-center">
+        <div className={cx('contact-section')}>
+          <div className={classNames(cx('contact-item'), 'd-flex align-items-center')}>
             <span className={cx('icon')}>
               <FontAwesomeIcon icon={faEnvelope} />
             </span>
             <span>shopcoxyz@gmail.com</span>
           </div>
 
-          <span className="ms-4">&mdash;</span>
+          <span className={cx('hyphen')}>&mdash;</span>
 
-          <div className="d-flex align-items-center">
+          <div className={classNames(cx('contact-item'), 'd-flex align-items-center')}>
             <span className={cx('icon')}>
               <FontAwesomeIcon icon={faPhoneVolume} />
             </span>
@@ -118,7 +118,7 @@ function StoreItem({ store }) {
         </div>
 
         {/* CTA buttons*/}
-        <div className="d-flex align-content-center">
+        <div className={cx('btns')}>
           {ctas.map((cta, index) => {
             return (
               <Button
