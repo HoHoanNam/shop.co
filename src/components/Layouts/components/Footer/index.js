@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-solid-svg-icons';
@@ -16,7 +17,11 @@ function Footer() {
         <div className="row g-4">
           {/* Item 1 */}
           <div className="col-12 col-lg-4">
-            <p className={classNames(cx('footer-title'), 'navbar-logo')}>SHOP.CO</p>
+            <p className={classNames(cx('footer-title'), 'navbar-logo')}>
+              <Link to="/" className="text-black">
+                SHOP.CO
+              </Link>
+            </p>
             <p className="fw-light text-secondary">
               We have clothes that suits your style and <br /> which you're proud to wear. From <br /> women to men.
             </p>
